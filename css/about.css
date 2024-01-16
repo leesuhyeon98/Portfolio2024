@@ -107,20 +107,58 @@
 }
 
 /* 스킬 */
-.profile .pro-btm {
+.profile .skill {
     width: 100%;
     position: absolute;
     top: 950px;
 }
-.pro-btm ul {
+.skill ul {
     width: 100%;
     display: flex;
     justify-content: space-around;
     margin-bottom: 30px;
 }
-.pro-btm ul li {
+.skill ul li {
     width: 15%; height: 15%;
 }
-.pro-btm ul li .skill {
-    width: 100%; height: 100%;
+
+.skill ul li .ps {
+    background: url(../img/Ps.svg) no-repeat center / 65%;
+    border-radius: 100%;
+}
+.skill ul li .ai {
+    background: url(../img/Ai.svg) no-repeat center / 65%;
+    border-radius: 100%;
+}
+.skill ul li .ae {
+    background: url(../img/Ae.svg) no-repeat center / 65%;
+    border-radius: 100%;
+}
+.skill ul li .pr {
+    background: url(../img/Pr.svg) no-repeat center / 65%;
+    border-radius: 100%;
+}
+.skill ul li .id {
+    background: url(../img/Id.webp) no-repeat center / 65%;
+    border-radius: 100%;
+}
+.skill ul li .html {
+    background: url(../img/html.svg) no-repeat center / 45%;
+    border-radius: 100%;
+}
+.skill ul li .css {
+    background: url(../img/css.svg) no-repeat center / 35%;
+    border-radius: 100%;
+}
+.skill ul li .js {
+    background: url(../img/js.svg) no-repeat center / 60%;
+    border-radius: 100%;
+}
+.skill ul li .figma {
+    background: url(../img/figma.svg) no-repeat center / 30%;
+    border-radius: 100%;
+}
+.skill ul li .blender {
+    background: url(../img/blender.svg) no-repeat center / 65%;
+    border-radius: 100%;
 }

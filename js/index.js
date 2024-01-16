@@ -1,26 +1,63 @@
 window.onload = function(){
     // 스킬 프로그레스
-    function progressBar(selector, guage, color){
+    function progressBar(selector, gauge, color){
         var bar = new ProgressBar.Circle(selector, {
             strokeWidth: 20,  //채워지는 선의 굵기
-            easing: 'easeInOut', //애니메이션 속도
-            duration: 1400,  //총 진행 시간
-            color: color,  //채워지는 선 색상
+            easing: 'easeInOut',
+            duration: 1400,
+            color: color,
             trailColor: '#EBEBEB', // 배경 선 색상
             trailWidth: 20, //배경 선의 긁기
-            // svgStyle: {width: '100%', height: '100%'} 지워도 상관 없음
+            // step : function(state, circle){
+            //     circle.setText(Math.round(circle.value() *100)+"%")
+            // }
         });
-        bar.animate(guage)
+        bar.animate(gauge);
+        return bar; // Return the progress bar instance
     }
-    let bar1 = progressBar(".ps", 0.6, "#1080E8");
-    let bar2 = progressBar(".ai", 0.95, "#FF9A00");
-    let bar3 = progressBar(".ae", 0.5, "#4B4BE1");
-    let bar4 = progressBar(".pr", 0.6, "#5151CF");
-    let bar5 = progressBar(".id", 0.3, "#F6537F");
-    let bar6 = progressBar(".html", 0.5, "#FF835C");
-    let bar7 = progressBar(".css", 0.6, "#52B2FF");
-    let bar8 = progressBar(".js", 0.3, "#FFBD3D");
-    let bar9 = progressBar(".figma", 0.7, "#747474");
-    let bar10 = progressBar(".Blender", 0.5, "#FF7021");
-    
+
+    let observe = new IntersectionObserver(function(entries){
+        entries.forEach(function(item){
+            if(item.isIntersecting){
+                proPs.animate(0.5)
+                proAi.animate(0.7)
+                proAe.animate(0.9)
+                proPr.animate(0.5)
+                proId.animate(0.5)
+                proHtml.animate(0.5)
+                proCss.animate(0.5)
+                proJs.animate(0.4)
+                proFigma.animate(0.4)
+                proBlender.animate(0.4)
+            }else{
+                proPs.animate(0)
+                proAi.animate(0)
+                proAe.animate(0)
+                proPr.animate(0)
+                proId.animate(0)
+                proHtml.animate(0)
+                proCss.animate(0)
+                proJs.animate(0)
+                proFigma.animate(0)
+                proBlender.animate(0)
+            }
+        })
+    })
+    let skillSection = document.querySelector(".skill")
+
+    // Start the progress bars with initial values
+    let proPs = progressBar(".ps", 0.6, "#1080E8");
+    let proAi = progressBar(".ai", 0.9, "#FF9A00");
+    let proAe = progressBar(".ae", 0.5, "#4B4BE1");
+    let proPr = progressBar(".pr", 0.6, "#5151CF");
+    let proId = progressBar(".id", 0.3, "#F6537F");
+    let proHtml = progressBar(".html", 0.5, "#FF835C");
+    let proCss = progressBar(".css", 0.6, "#52B2FF");
+    let proJs = progressBar(".js", 0.2, "#FFBD3D");
+    let proFigma = progressBar(".figma", 0.7, "#747474");
+    let proBlender = progressBar(".blender", 0.5, "#FF7021");
+    observe.observe(skillSection)
 }
+
+
+    
