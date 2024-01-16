@@ -1,0 +1,45 @@
+/* 영상포폴 + 타이틀 */
+.portfolio {}
+.portfolio .title {
+    margin: 120px 0px 100px;
+    font-size: 8rem;
+    text-align: center;
+    letter-spacing: 2rem;
+}
+.portfolio .title h1 {}
+
+/* 영상 뷰 + 설명 */
+.portfolio .video {}
+.video .video-view {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+.video .video-view .titleView {}
+.video .video-view .text-box {
+    width: 350px; height: 600px;
+    background-color: #C8B1E4;
+}
+.video .video-view .text-box h1 {
+    padding: 3rem 2rem;
+    font-size: 2.5rem;
+}
+.video .video-view .text-box p {
+    padding: 0 2rem;
+    line-height: 3rem;
+}
+.video .video-view .text-box p:last-child {
+    margin-top: 5rem;
+}
+
+/* 영상 리스트 */
+.video .video-wrap {}
+.video .video-wrap li {}
+.video .video-wrap li .thumb-img {}
+.video .video-wrap li .thumb-img img {}
+.video .video-wrap li .text {}
+.video .video-wrap li .text h1 {}
+.video .video-wrap li .text h2 {}
+.video .video-wrap li .text h3 {}
+
+/* 서브포폴 */

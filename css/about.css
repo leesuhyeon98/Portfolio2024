@@ -2,7 +2,7 @@
 /* 프로필&스킬 */
 .profile {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 160px;
     position: relative;
 }
 
@@ -10,9 +10,8 @@
 .profile .pro-top {}
 .profile .pro-top .my-emoji {
     width: 600px;
-    height: 600px;
+    height: 800px;
     margin: 0 auto;
-    padding-top: 150px;
 }
 .profile .pro-top .my-emoji img {
     border-radius: 100%;
@@ -33,7 +32,7 @@
 .profile .pro-top .info {}
 
 .profile .pro-top .info .basic {
-    top: 20px; left: 120px;
+    top: 0px; left: 120px;
 }
 .profile .pro-top .info .basic > .info-title {
     top: 10px; left: 15px;
@@ -109,17 +108,27 @@
 /* 스킬 */
 .profile .skill {
     width: 100%;
-    position: absolute;
-    top: 950px;
 }
 .skill ul {
-    width: 100%;
+    width: 100%; max-width: 1250px;
     display: flex;
+    margin: 30px auto;
     justify-content: space-around;
-    margin-bottom: 50px;
+}
+.skill ul:first-child {
+    margin-bottom: 70px;
 }
 .skill ul li {
-    width: 10%; height: 10%;
+    width: 7%; position: relative;
+}
+.skill ul li::after {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+}
+.skill ul li > div {
+    width: 100%; height: 100%;
+    position: absolute;
 }
 
 .skill ul li .ps {
@@ -159,6 +168,6 @@
     border-radius: 100%;
 }
 .skill ul li .blender {
-    background: url(../img/blender.svg) no-repeat center / 65%;
+    background: url(../img/blender.svg) no-repeat center / 55%;
     border-radius: 100%;
 }

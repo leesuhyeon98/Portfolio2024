@@ -3,7 +3,7 @@ body {
 }
 /* 헤더 */
 .header {
-    width: 100%; height: 6rem;
+    width: 100%; height: 8rem;
     background-color: #F4EFFA;
     position: fixed;
     top: 0;
@@ -13,6 +13,8 @@ body {
 .header .inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 100%;
 }
 .header .inner .logo {
     height: 6rem;
@@ -31,10 +33,11 @@ body {
 }
 .header .header-manu > ul {
     display: flex;
+    height: 100%;
+    align-items: center;
 }
 .header .header-manu > ul > li {
-    flex: 1; line-height: 60px; position: relative;
-    height: 100%;
+    flex: 1; position: relative;
     color: #9B72CF;
 }
 .header .header-manu > ul > li:hover {
@@ -46,15 +49,18 @@ body {
 }
 /* 포폴 서브메뉴 네비 */
 .header-manu ul li .sub-manu {
-    position: absolute; top: 60px; width: 100%;
+    position: absolute; top: 5rem; width: 100%;
     background-color: #F4EFFA;
     height: 0;
     overflow: hidden;
     transition: 0.3s;
-    font-size: 14px;
     color: #9B72CF;
 }
-.header-manu ul li .sub-manu li {}
+.header-manu ul li .sub-manu li {
+    font-size: 1.5rem;
+    height: 5rem;
+    line-height: 5rem;
+}
 .header-manu ul li .sub-manu li:hover {
     color: #532B88;
     transition: 0.3s;
@@ -64,14 +70,14 @@ body {
     text-align: center;
 }
 .header-manu ul li:hover .sub-manu {
-    height: 240px;
+    height: 20rem;
 }
 
 /* 홈 인트로 */
 .home {
     width: 100%;
     height: 1080px;
-    padding-top: 60px;
+    padding-top: 8rem;
     position: relative;
 }
 .home .videowrap {
