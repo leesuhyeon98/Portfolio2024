@@ -19,16 +19,16 @@ window.onload = function(){
     let observe = new IntersectionObserver(function(entries){
         entries.forEach(function(item){
             if(item.isIntersecting){
-                proPs.animate(0.5)
-                proAi.animate(0.7)
-                proAe.animate(0.9)
-                proPr.animate(0.5)
-                proId.animate(0.5)
+                proPs.animate(0.6)
+                proAi.animate(0.9)
+                proAe.animate(0.5)
+                proPr.animate(0.6)
+                proId.animate(0.3)
                 proHtml.animate(0.5)
-                proCss.animate(0.5)
-                proJs.animate(0.4)
-                proFigma.animate(0.4)
-                proBlender.animate(0.4)
+                proCss.animate(0.6)
+                proJs.animate(0.2)
+                proFigma.animate(0.7)
+                proBlender.animate(0.5)
             }else{
                 proPs.animate(0)
                 proAi.animate(0)
