@@ -112,14 +112,14 @@
 .skill ul {
     width: 100%; max-width: 1250px;
     display: flex;
-    margin: 30px auto;
+    margin: 60px auto;
     justify-content: space-around;
 }
 .skill ul:first-child {
-    margin-bottom: 70px;
+    margin-bottom: 7rem;
 }
 .skill ul li {
-    width: 7%; position: relative;
+    width: 10%; position: relative;
 }
 .skill ul li::after {
     content: "";
@@ -168,6 +168,6 @@
     border-radius: 100%;
 }
 .skill ul li .blender {
-    background: url(../img/blender.svg) no-repeat center / 55%;
+    background: url(../img/blender.png) no-repeat center / 60%;
     border-radius: 100%;
 }

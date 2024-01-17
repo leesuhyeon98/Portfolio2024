@@ -19,13 +19,13 @@ window.onload = function(){
     let observe = new IntersectionObserver(function(entries){
         entries.forEach(function(item){
             if(item.isIntersecting){
-                proPs.animate(0.6)
+                proPs.animate(0.5)
                 proAi.animate(0.9)
                 proAe.animate(0.5)
                 proPr.animate(0.6)
                 proId.animate(0.3)
                 proHtml.animate(0.5)
-                proCss.animate(0.6)
+                proCss.animate(0.2)
                 proJs.animate(0.2)
                 proFigma.animate(0.7)
                 proBlender.animate(0.5)
@@ -59,6 +59,64 @@ window.onload = function(){
     observe.observe(skillSection)
 
     // 영상 포폴
+    let workWrap = document.querySelector(".swiper-wrapper")
+    let body = document.querySelector("body")
+
+    let workData;
+    const eventXhttp = new XMLHttpRequest();
+    eventXhttp.open("GET", "video_data.json");
+    eventXhttp.send();
+    eventXhttp.onreadystatechange = function(event){
+        const req = event.target;
+        if(req.readyState === XMLHttpRequest.DONE){
+            workData = JSON.parse(req.response);
+            workSection()
+        }
+    }
+    function workSection(){
+        let workListHtml = ``
+        for(let i = 0; i<workData.item_count; i++){
+            let obj = workData[`item_${i + 1}`];
+            let temp = `
+                <li class="swiper-slide">
+                    <div class="thumb-img">
+                    <img src="https://img.youtube.com/vi/${obj.videoid}/mqdefault.jpg" alt="썸네일">
+                    </div>
+                    <div class="text">
+                        <h1>${obj.cate}</h1>
+                        <h2>작업기간 : ${obj.period}</h2>
+                        <h3>사용툴 : ${obj.tool}</h3>
+                    </div>
+                </li>
+            `
+            workListHtml += temp;
+        }
+        workWrap.innerHTML = workListHtml
+    }
+    let galleryThumb = new Swiper(".swiper",{
+        loop: true,
+        spaceBetween : 10,
+        slidesPerView : 5,
+        centeredSlides : true,
+        loopedSlides : 5,
+        slideToClickedSlide : true
+    })
+
+    // 서브 포폴 탭
+    let tabs = document.querySelectorAll(".sub-portfolio .sub-tabs li")
+    let tabCont = document.querySelectorAll(".sub-portfolio .slide-wrap")
+
+    for(let i =0; i < tabs.length; i++){
+        tabs[i].onclick = function(event){
+            event.preventDefault();
+            for(let j =0; j< tabs.length; j++){
+                tabs[j].classList.remove("active")
+                tabCont[j].classList.remove("active")
+            }
+            this.classList.add("active")
+            tabCont[i].classList.add("active")
+        }
+    }
 }
 
 

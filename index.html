@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style media data-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></style>
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/portfolio.css">
     <!-- 프로그레스 바 -->
     <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>
     <script src="js/html5shiv.js"></script>
+    <!-- 영상 뷰 스와이퍼 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <!-- <script src="js/prefixfree.min.js"></script> -->
     <script src="js/index.js"></script>
 </head>
@@ -139,7 +138,7 @@
                         <h1 class="info-title">License</h1>
                         <ul>
                             <li>
-                                <p><span>2022.05</span>GTQ 일러스트1급</p>
+                                <p><span>2022.05</span>GTQ 일러스트 1급</p>
                             </li>
                             <li>
                                 <p><span>2019.09</span>컴퓨터그래픽스운용기능사</p>
@@ -198,7 +197,9 @@
                 <!-- 영상 뷰&설명 -->
                 <div class="video-view">
                     <div class="titleView">
-                        <img src="http://placehold.it/950x600" alt="영상 자동재생 뷰">
+                        <video src="img/video2.mp4" muted controls></video>
+                        
+                        <!-- <img src="http://placehold.it/950x600" alt="영상 자동재생 뷰"> -->
                         <!-- <img src="http://placedog.net/400/500" alt="강아지이미지첨부"> -->
                     </div>
                     <div class="text-box">
@@ -212,18 +213,20 @@
                     </div>
                 </div>
                 <!-- 66_videopopup240105.html 자바스크립트 이용 -->
-                <ul class="video-wrap">
-                    <li>
-                        <div class="thumb-img">
-                        <img src="https://img.youtube.com/vi/xWUeEfP70f8/mqdefault.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h1>카테고리</h1>
-                            <h2>작업기간 : 1주일</h2>
-                            <h3>사용툴 : 프리미어프로,애프터이펙트</h3>
-                        </div>
-                    </li>
-                </ul>
+                <div class="swiper">
+                    <ul class="swiper-wrapper">
+                        <!-- <li class="swiper-slide">
+                            <div class="thumb-img">
+                            <img src="https://img.youtube.com/vi/xWUeEfP70f8/mqdefault.jpg" alt="썸네일">
+                            </div>
+                            <div class="text">
+                                <h1>카테고리</h1>
+                                <h2>작업기간 : 1주일</h2>
+                                <h3>사용툴 : 프리미어프로,애프터이펙트</h3>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -247,7 +250,7 @@
                                     <img src="img/favicon.png" alt="">
                                 </div>
                                 <div class="textbox">
-                                    <h1>카테고리</h1>
+                                    <h1>카테고리1</h1>
                                     <h2>제목</h2>
                                 </div>
                             </a>
@@ -267,7 +270,7 @@
                                     <img src="img/favicon.png" alt="">
                                 </div>
                                 <div class="textbox">
-                                    <h1>카테고리</h1>
+                                    <h1>카테고리2</h1>
                                     <h2>제목</h2>
                                 </div>
                             </a>
@@ -287,7 +290,7 @@
                                     <img src="img/favicon.png" alt="">
                                 </div>
                                 <div class="textbox">
-                                    <h1>카테고리</h1>
+                                    <h1>카테고리3</h1>
                                     <h2>제목</h2>
                                 </div>
                             </a>

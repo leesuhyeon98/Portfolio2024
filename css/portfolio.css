@@ -9,15 +9,23 @@
 .portfolio .title h1 {}
 
 /* 영상 뷰 + 설명 */
-.portfolio .video {}
+.portfolio .video {
+    width: 100%;
+}
 .video .video-view {
+    width: 100%; height: 600px;
     display: flex;
-    justify-content: space-between;
+    gap: 3%;
     margin-bottom: 5rem;
 }
-.video .video-view .titleView {}
+.video .video-view .titleView {
+    width: 75%; height: 100%;
+}
+.video .video-view .titleView video {
+    width: 100%; height: 100%;
+}
 .video .video-view .text-box {
-    width: 350px; height: 600px;
+    width: 22%; height: 100%;
     background-color: #C8B1E4;
 }
 .video .video-view .text-box h1 {
@@ -27,14 +35,25 @@
 .video .video-view .text-box p {
     padding: 0 2rem;
     line-height: 3rem;
+    height: 400px;
 }
 .video .video-view .text-box p:last-child {
-    margin-top: 5rem;
+    margin-top: 3rem;
+    height: 2rem;
 }
 
 /* 영상 리스트 */
-.video .video-wrap {}
-.video .video-wrap li {}
+.video .video-wrap {
+
+}
+.video .video-wrap li {
+
+}
+/* .video .video-wrap li::after {
+    content: "";
+    padding-bottom: 56.25%;
+    display: block;
+} */
 .video .video-wrap li .thumb-img {}
 .video .video-wrap li .thumb-img img {}
 .video .video-wrap li .text {}
@@ -43,3 +62,31 @@
 .video .video-wrap li .text h3 {}
 
 /* 서브포폴 */
+.sub-portfolio {
+    margin-top: 120px;
+}
+.sub-portfolio .sub-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-bottom: 20px;
+}
+.sub-portfolio .sub-tabs li {
+    font-size: 4rem; margin: 10px;
+    width: 180px; height: 50px;
+}
+.sub-portfolio .sub-tabs li.active a {
+    font-family: 'GmarketSansBold';
+}
+
+.sub-portfolio .slide-wrap {
+    display: none;
+}
+.sub-portfolio .slide-wrap.active {
+    display: block;
+}
+
+.slide-wrap .sw-arrow {}
+.slide-wrap .sw-prev {}
+.slide-wrap .sw-next {}
+
