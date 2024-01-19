@@ -60,60 +60,12 @@ window.onload = function(){
 
     // 영상 포폴
 
-    let videoWrap = document.querySelector(".swiper2 ul")
-    let videoItem = document.querySelectorAll(".swiper-wrapper li")
-    let videoData;
-    const eventXhttp1 = new XMLHttpRequest();
-    eventXhttp1.open("GET", "viewvideobox_data.json");
-    eventXhttp1.send();
-    eventXhttp1.onreadystatechange = function(event){
-        const req = event.target;
-        if(req.readyState === XMLHttpRequest.DONE){
-            videoData = JSON.parse(req.response);
-            videoSection()
-        }
-    }
-    function videoSection(){
-        let videoListHtml = ``
-        for(let i = 0; i<videoData.item_count; i++){
-            let obj = videoData[`item_${i + 1}`];
-            let temp = `
-            <li class="swiper-slide">
-                <iframe src="https://www.youtube.com/embed/${obj.videoid}?autoplay" allowfullscreen></iframe>
-                <div class="text">
-                    <div class="info-text">
-                        <h1>${obj.title}</h1>
-                        <h2>작업기간 : ${obj.period}</h2>
-                        <h3>사용툴 : <br>${obj.tool}</h3>
-                        <h3><span>${obj.info}</span></h3>
-                        <h4>프로젝트 본인 기여도 : <span>${obj.per}</span></h4>
-                    </div>
-                </div>
-            </li>
-            `
-            videoListHtml += temp;
-        }
-        videoWrap.innerHTML = videoListHtml
-
-        let videoThumb = new Swiper(".swiper2",{
-            loop: true,
-            loopedSlides : 7
-            // effect : "fade"
-        })
-
-        videoItem.forEach(function(item, index){
-            item.addEventListener("click", function(){
-                let obj = videoData[`item_${index + 1}`];
-                modalCont.innerHTML =`<iframe src="https://www.youtube.com/embed/${obj.videoid}?autoplay=1&mute=1" allowfullscreen></iframe>`
-            })
-        })
-    }
 
     let workWrap = document.querySelector(".swiper1 ul")
     let workItem = document.querySelectorAll(".swiper-wrapper li")
     let workData;
     const eventXhttp = new XMLHttpRequest();
-    eventXhttp.open("GET", "viewvideobox_data.json");
+    eventXhttp.open("GET", "video_data.json");
     eventXhttp.send();
     eventXhttp.onreadystatechange = function(event){
         const req = event.target;
@@ -147,7 +99,7 @@ window.onload = function(){
             spaceBetween : 10,
             slidesPerView : 3,
             centeredSlides : true,
-            loopedSlides : 7,
+            loopedSlides : 3,
             slideToClickedSlide : true
         })
 
@@ -159,22 +111,6 @@ window.onload = function(){
             })
         })
     }
-
-    let videoCont = new Swiper(".video-cont",{
-        loop: true,
-        spaceBetween : 10,
-        loopedSlides : 7
-    })
-    let videoThumb = new Swiper(".video-thumb",{
-        loop: true,
-        spaceBetween : 10,
-        slidesPerView : 3,
-        centeredSlides : true,
-        loopedSlides : 7,
-        slideToClickedSlide : true
-    })
-    videoCont.controller.control = videoThumb
-    videoThumb.controller.control = videoCont
     
 
     // 서브 포폴 탭

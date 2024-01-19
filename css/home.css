@@ -4,7 +4,7 @@ body {
 /* 헤더 */
 .header {
     width: 100%; height: 8rem;
-    background-color: #F4EFFA;
+    /* background-color: #F4EFFA; */
     position: fixed;
     top: 0;
     left: 0;
@@ -49,7 +49,7 @@ body {
 /* 포폴 서브메뉴 네비 */
 .header-manu ul li .sub-manu {
     position: absolute; top: 5rem; width: 100%;
-    background-color: #F4EFFA;
+    /* background-color: #F4EFFA; */
     height: 0;
     overflow: hidden;
     transition: 0.3s;
@@ -74,22 +74,23 @@ body {
 
 /* 홈 인트로 */
 .home {
-    width: 100%;
-    height: 1080px;
     padding-top: 8rem;
     position: relative;
+    width: 100%; height: 100vh;
 }
-.home .videowrap {
-    width: 100%;
+.visual video {
     height: 100%;
 }
-.home .videowrap video {
-    width: 100%;
-    height: 100%;
+.visual .video-controls {
+    position: absolute; bottom: 0; width: 100%;
 }
-.home .videowrap .live-video {}
-.home .videowrap .live-video .progress {}
-.home .videowrap .live-video .progress .bar {}
+.visual .video-controls .progress {
+    width: 100%; height: 10px;
+    background-color: rgba(199, 212, 236, 0.3);
+}
+.visual .video-controls .progress .bar {
+    height: 100%; background-color: rgb(30, 76, 163);
+}
 
 /* 인트로 아이콘 네비 */
 .home-videoList {

@@ -1,0 +1,125 @@
+/* 영상포폴 + 타이틀 */
+.portfolio {}
+.portfolio .title {
+    margin: 120px 0px 100px;
+    font-size: 8rem;
+    text-align: center;
+    letter-spacing: 2rem;
+}
+.portfolio .title h1 {}
+
+/* 영상 뷰 + 설명 */
+.portfolio .video {
+    width: 100%; 
+}
+.video .video-view {
+    width: 100%; height: 60rem;
+    display: flex;
+    gap: 3%;
+    margin-bottom: 5rem;
+}
+.video .video-view .titleView {
+    width: 75%; height: 100%;
+}
+.video .video-view .titleView iframe {
+    width: 100%; height: 100%;
+    border: none;
+}
+.video .video-view .text-box {
+    width: 22%; height: 100%;
+    background-color: #C8B1E4;
+}
+.video .video-view .text-box h1 {
+    padding: 3rem 2rem;
+    font-size: 2.5rem;
+}
+.video .video-view .text-box h2 {
+    padding: 1rem 2rem;
+    font-size: 1.9rem;
+}
+.video .video-view .text-box p {
+    padding: 0 2rem;
+    line-height: 3rem;
+    height: 36rem;
+}
+.video .video-view .text-box p:last-child {
+    height: 2rem;
+    font-size: 1.4rem;
+}
+
+/* 영상 리스트 */
+.video .swiper1 {
+    overflow: hidden;
+}
+.swiper1 .swiper-wrapper li {
+    width: calc(100% / 3);
+    position: relative;
+    cursor: pointer;
+}
+.video .swiper-wrapper li::after {
+    content: "";
+    padding-bottom: 56.25%;
+    display: block;
+}
+.swiper1 .swiper-wrapper li .thumb-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+}
+.swiper1 .swiper-wrapper li .thumb-img img {
+    width: 100%; height: 100%;
+}
+.swiper1 .swiper-wrapper li .text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #F4EFFA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+.swiper1 .swiper-wrapper li:hover .text {
+    opacity: 1;
+}
+.swiper1 .swiper-wrapper li .text h1 {}
+.swiper1 .swiper-wrapper li .text h2 {}
+.swiper1 .swiper-wrapper li .text h3 {}
+
+/* 서브포폴 */
+.sub-portfolio {
+    margin-top: 120px;
+}
+.sub-portfolio .sub-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-bottom: 20px;
+}
+.sub-portfolio .sub-tabs li {
+    font-size: 4rem; margin: 10px;
+    width: 180px; height: 50px;
+    text-align: center;
+    color: #9B72CF;
+}
+.sub-portfolio .sub-tabs li.active a {
+    font-family: 'GmarketSansBold';
+    color: #532B88;
+}
+
+.sub-portfolio .slide-wrap {
+    display: none;
+}
+.sub-portfolio .slide-wrap.active {
+    display: block;
+}
+
+.slide-wrap .sw-arrow {}
+.slide-wrap .sw-prev {}
+.slide-wrap .sw-next {}
+

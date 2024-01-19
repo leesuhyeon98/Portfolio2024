@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moss</title>
+    <title>제목</title>
     <!-- 폰트어썸 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style media data-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></style>
     <link rel="stylesheet" href="css/common.css">
     <!-- 프로그레스 바 -->
@@ -61,19 +61,30 @@
         </div>
     </header>
     <!-- 홈(바로 보이는 곳)메인 영상 -->
-    <section class="home visual">
-            <video src="img/video2.mp4" autoplay muted loop></video>
-            <div class="video-controls">
+    <section class="home">
+        <div class="videowrap">
+            <video src="img/iu_celebrity-수정1.mp4" muted autoplay loop></video>
+            <div class="live-video">
                 <div class="progress">
                     <div class="bar"></div>
                 </div>
-                <div class="play-btn">
-                    <!-- <i class="fa-solid fa-play"></i> -->
-                </div>
-                <div class="volume-btn">
-                    <!-- <i class="fa-solid fa-volume-xmark"></i> -->
-                </div>
             </div>
+            <!-- 인트로 영상 아이콘 네비 -->
+            <ul class="home-videoList">
+                <li>
+                    <i class="fa-solid fa-address-card fa-2x"></i>
+                    <span>Interview</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-object-group fa-2x"></i>
+                    <span>Workflow</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-photo-film fa-2x"></i>
+                    <span>Video editing</span>
+                </li>
+            </ul>
+        </div>
     </section>
     <!-- 프로필 & 스킬 -->
     <section class="profile">
@@ -182,36 +193,40 @@
                 <h1>PORTFOLIO</h1>
             </div>
             <!-- 영상 포폴 -->
-            <div class="swiper swiper2 video-cont">
-                <ul class="swiper-wrapper">
-                    <!-- <li class="swiper-slide">
-                        <iframe src="https://www.youtube.com/embed/xWUeEfP70f8?autoplay" allowfullscreen></iframe>
-                        <div class="text">
-                            <div class="info-text">
-                                <h1>프로젝트 1</h1>
-                                <h2>작업기간 : 1개월</h2>
-                                <h3>사용툴 :<br>프리미어프로, 애프터이펙트</h3>
-                                <h3><span>이런 의도로 만들었고 이러한 작업으로 완성했다 1</span></h3>
-                                <h4>프로젝트 본인 기여도 : <span>84%</span></h4>
-                            </div>
-                        </div>
-                    </li> -->
-                </ul>
-            </div>
-            <!-- 영상썸네일 -->
-            <div class="swiper swiper1 video-thumb">
-                <ul class="swiper-wrapper">
-                    <!-- <li class="swiper-slide">
-                        <div class="thumb-img">
+            <div class="video">
+                <!-- 영상 뷰&설명 -->
+                <div class="video-view">
+                    <div class="titleView">
+                        <video src="img/video2.mp4" muted controls></video>
+                        
+                        <!-- <img src="http://placehold.it/950x600" alt="영상 자동재생 뷰"> -->
+                        <!-- <img src="http://placedog.net/400/500" alt="강아지이미지첨부"> -->
+                    </div>
+                    <div class="text-box">
+                        <h1>프로젝트 네임</h1>
+                        <p>
+                            어떠한 의도로 만들었으며 이러한 이유로
+                            이렇게 되었으면 하는 바람에 만들었다.
+                            그리고 관련 설명 어쩌구 저쩌구 등등
+                        </p>
+                        <p>프로젝트에 대한 본인 기여도<span>00%</span></p>
+                    </div>
+                </div>
+                <!-- 66_videopopup240105.html 자바스크립트 이용 -->
+                <div class="swiper1">
+                    <ul class="swiper-wrapper">
+                        <!-- <li class="swiper-slide">
+                            <div class="thumb-img">
                             <img src="https://img.youtube.com/vi/xWUeEfP70f8/mqdefault.jpg" alt="썸네일">
-                        </div>
-                        <div class="text">
-                            <h1>모션그래픽</h1>
-                            <h2>작업기간 : 1주일</h2>
-                            <h3>사용툴 : 프리미어프로, 일러스트</h3>
-                        </div>
-                    </li> -->
-                </ul>
+                            </div>
+                            <div class="text">
+                                <h1>카테고리</h1>
+                                <h2>작업기간 : 1주일</h2>
+                                <h3>사용툴 : 프리미어프로,애프터이펙트</h3>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
             </div>
         </div>
     </section>

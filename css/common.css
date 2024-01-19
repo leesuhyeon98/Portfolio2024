@@ -4,6 +4,7 @@
 @import url(about.css);
 @import url(portfolio.css);
 
+
 *{margin: 0; padding: 0; box-sizing: border-box; font : inherit; color: inherit; font-family: 'GmarketSansMedium';}
 
 a{text-decoration: none;}
