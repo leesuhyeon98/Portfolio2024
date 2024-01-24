@@ -29,54 +29,54 @@
             <!-- 네비게이션 메뉴 -->
             <nav class="header-manu">
                 <ul>
-                    <li>
-                        <a href="#">HOME</a>
+                    <li class="active">
+                        <a href="#home">HOME</a>
                     </li>
                     <li>
-                        <a href="#">ABOUT</a>
+                        <a href="#about">ABOUT</a>
                     </li>
                     <li>
-                        <a href="#">PORTFOLIO</a>
+                        <a href="#portfolio">PORTFOLIO</a>
                         <!-- 포트폴리오 서브 메뉴 -->
                         <ul class="sub-manu">
                             <li>
-                                <a href="#">Video Design</a>
+                                <a href="#videocont">Video Design</a>
                             </li>
                             <li>
-                                <a href="#">Project Design</a>
+                                <a href="#subportfolio">Project Design</a>
                             </li>
                             <li>
-                                <a href="#">Graphic Design</a>
+                                <a href="#graphic">Graphic Design</a>
                             </li>
                             <li>
-                                <a href="#">Work Design</a>
+                                <a href="#work">Work Design</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">CONTACT</a>
+                        <a href="#contact">CONTACT</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
     <!-- 홈(바로 보이는 곳)메인 영상 -->
-    <section class="home visual">
-            <video src="img/video2.mp4" autoplay muted loop></video>
+    <section class="home visual" id="home">
+            <video src="img/iu_celebrity-수정1.mp4" autoplay muted loop></video>
             <div class="video-controls">
-                <div class="progress">
-                    <div class="bar"></div>
-                </div>
                 <div class="play-btn">
                     <!-- <i class="fa-solid fa-play"></i> -->
                 </div>
                 <div class="volume-btn">
                     <!-- <i class="fa-solid fa-volume-xmark"></i> -->
                 </div>
+                <div class="progress pro-bar">
+                    <div class="bar"></div>
+                </div>
             </div>
     </section>
     <!-- 프로필 & 스킬 -->
-    <section class="profile">
+    <section class="profile" id="about">
         <div class="inner">
             <div class="pro-top">
                 <div class="my-emoji">
@@ -176,137 +176,90 @@
         </div>
     </section>
     <!-- 포트폴리오 -->
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="inner">
             <div class="title">
                 <h1>PORTFOLIO</h1>
             </div>
-            <!-- 영상 포폴 -->
-            <div class="swiper swiper2 video-cont">
-                <ul class="swiper-wrapper">
-                    <!-- <li class="swiper-slide">
-                        <iframe src="https://www.youtube.com/embed/xWUeEfP70f8?autoplay" allowfullscreen></iframe>
-                        <div class="text">
-                            <div class="info-text">
-                                <h1>프로젝트 1</h1>
-                                <h2>작업기간 : 1개월</h2>
-                                <h3>사용툴 :<br>프리미어프로, 애프터이펙트</h3>
-                                <h3><span>이런 의도로 만들었고 이러한 작업으로 완성했다 1</span></h3>
-                                <h4>프로젝트 본인 기여도 : <span>84%</span></h4>
+            <div class="work">
+                <ul>
+                    <!-- <li>
+                        <div class="thumb-img">
+                            <img src="https://img.youtube.com/vi/u9eehcAHhi8/maxresdefault.jpg" alt="">
+                        </div>
+                        <div class="view-cont">
+                            <div class="player">
+                                <iframe src="https://www.youtube.com/embed/u9eehcAHhi8?autoplay=1&mute=1" allowfullscreen></iframe>
+                            </div>
+                            <div class="info">
+                                <h1>카테고리 : 모션그래픽</h1>
+                                <h2>작업기간 : 1주일</h2>
+                                <h3>사용툴 : 일러스트, 프리미어...</h3>
+                                <p>이러한 의도로 이렇게 의도했다요.</p>
+                                <p>프로젝트 본인 기여도 00%</p>
                             </div>
                         </div>
                     </li> -->
                 </ul>
             </div>
-            <!-- 영상썸네일 -->
-            <div class="swiper swiper1 video-thumb">
-                <ul class="swiper-wrapper">
-                    <!-- <li class="swiper-slide">
-                        <div class="thumb-img">
-                            <img src="https://img.youtube.com/vi/xWUeEfP70f8/mqdefault.jpg" alt="썸네일">
-                        </div>
-                        <div class="text">
-                            <h1>모션그래픽</h1>
-                            <h2>작업기간 : 1주일</h2>
-                            <h3>사용툴 : 프리미어프로, 일러스트</h3>
-                        </div>
-                    </li> -->
-                </ul>
-            </div>
+            <div class="viewmore"><a href="video-pofol.html">View More</a></div>
         </div>
+        <div class="modal"></div>
     </section>
     <!-- 서브 포폴 -->
-    <section class="sub-portfolio">
+    <section class="work2">
         <div class="inner">
-            <ul class="sub-tabs">
-                <li class="active"><a href="#">Graphic</a></li>
-                <li><a href="#">Project</a></li>
-                <li><a href="#">Work</a></li>
+            <ul class="tab-list2">
+                <!-- json연동 -->
+                <!-- 
+                    <li class="active"><a href="javascript:;">motion</a></li>
+                -->
             </ul>
-            <!-- 그래픽 탭 리스트(인터파크 쇼핑추천 참고) -->
-            <div class="slide-wrap active">
-                <div class="sw-arrow sw-prev"></div>
-                <div class="sw-arrow sw-next"></div>
-                <div class="swiper sw-subPort">
-                    <ul class="swiper-wrapper">
-                        <li class="swiper-slide">
-                            <a href="javascript:;">
-                                <div class="imgbox">
-                                    <img src="img/favicon.png" alt="">
-                                </div>
-                                <div class="textbox">
-                                    <h1>카테고리1</h1>
-                                    <h2>제목</h2>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- 프로젝트 탭 리스트 -->
-            <div class="slide-wrap">
-                <div class="sw-arrow sw-prev"></div>
-                <div class="sw-arrow sw-next"></div>
-                <div class="swiper sw-subPort">
-                    <ul class="swiper-wrapper">
-                        <li class="swiper-slide">
-                            <a href="javascript:;">
-                                <div class="imgbox">
-                                    <img src="img/favicon.png" alt="">
-                                </div>
-                                <div class="textbox">
-                                    <h1>카테고리2</h1>
-                                    <h2>제목</h2>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- 워크 탭 리스트 -->
-            <div class="slide-wrap">
-                <div class="sw-arrow sw-prev"></div>
-                <div class="sw-arrow sw-next"></div>
-                <div class="swiper sw-subPort">
-                    <ul class="swiper-wrapper">
-                        <li class="swiper-slide">
-                            <a href="javascript:;">
-                                <div class="imgbox">
-                                    <img src="img/favicon.png" alt="">
-                                </div>
-                                <div class="textbox">
-                                    <h1>카테고리3</h1>
-                                    <h2>제목</h2>
-                                </div>
-                            </a>
-                        </li>
+            <div class="slide-wrap3">
+                <div class="sw-arrow sw-prev3"></div>
+                <div class="sw-arrow sw-next3"></div>
+                <div class="swiper sw-work3">
+                    <ul class="swiper-wrapper3">
+                        
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <div class="modal2">
+        <div class="modal-cont2">
+            <!-- <div class="view-img">
+                <img src="../img/poster.jpg" alt="">
+            </div>
+            <div class="view-player">
+                <iframe src="https://www.youtube.com/embed/u9eehcAHhi8" allowfullscreen></iframe>
+            </div> -->
+        </div>
+    </div>
+    <div class="viewmore">View More</div>
+    <!-- 푸터 -->
+    <footer class="footer" id="contact">
         <div class="inner">
             <div class="contact">
                 <ul>
                     <li>
                         <a href="#">
-                            <img src="img/favicon.png" alt="카카오톡 아이콘">
+                            <img src="img/kakao.svg" alt="카카오톡 아이콘">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="img/favicon.png" alt="인스타그램 아이콘">
+                            <img src="img/instagram.png" alt="인스타그램 아이콘">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="img/favicon.png" alt="네이버 아이콘">
+                            <img src="img/naver.svg" alt="네이버 아이콘">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="img/favicon.png" alt="깃허브 아이콘">
+                            <img src="img/github.svg" alt="깃허브 아이콘">
                         </a>
                     </li>
                 </ul>

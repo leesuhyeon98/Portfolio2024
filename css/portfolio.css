@@ -1,118 +1,114 @@
 /* 영상포폴 + 타이틀 */
 .portfolio {
-    margin-top: 150px;
+    margin-top: 100px;
+    height: 900px;
 }
 .portfolio .title {
-    margin-bottom: 100px;
+    margin: 120px 0px 0px;
+    padding-top: 60px;
     font-size: 8rem;
     text-align: center;
     letter-spacing: 2rem;
     color: #532B88;
 }
-.portfolio .title h1 {}
 
-/* 영상 뷰 + 설명 */
-.video-cont {
-    width: 100%;
+
+.work { 
+    padding: 6rem 0; height: 590px;
     overflow: hidden;
 }
-.video-cont .swiper-wrapper {}
-.video-cont .swiper-wrapper .swiper-slide {
-    display: flex; width: 100%; gap: 2%;
+.work ul { display: flex; gap: 30px 5%; flex-wrap: wrap; }
+.work ul li { width: calc(90%/3); cursor: pointer; position: relative; }
+.work ul li .thumb-img { width: 100%; }
+.work ul li .thumb-img img { width: 100%; }
+.work ul li .view-cont { display: none; }
+
+.modal { width: 100%; height: 100%; position: fixed; 
+        background-color: rgba(0, 0, 0, 0.5); top: 0; left: 0; z-index: 11;
+        display: flex; justify-content: center; align-items: center;
+        opacity: 0; visibility: hidden; transition: 0.5s;
 }
-.video-cont .swiper-wrapper .swiper-slide::after {
-    content: "";
-    padding-bottom: 56.25%;
-    display: block;
+.modal.active {
+    opacity: 1; visibility: visible;
 }
-.video-cont .swiper-wrapper .swiper-slide iframe {
-    width: 75%; border: none;
+
+.view-cont { display: flex; width: 95%; }
+.view-cont .player { position: relative; width: 70%; }
+.view-cont .player::after { padding-bottom: 56.25%; content: ""; display: block; }
+.view-cont .player iframe { position: absolute; width: 100%; height: 100%; border: none; }
+.view-cont .info { width: 30%; background-color: #F4EFFA; padding: 30px;}
+.view-cont .info h1 { font-size: 30px; }
+.view-cont .info h2 { font-size: 20px; }
+.view-cont .info h3 { font-size: 20px; }
+.view-cont .info p { 
+    font-size: 18px; line-height: 25px;
+    margin-top: 20px;
 }
-.video-cont .swiper-wrapper .swiper-slide .text {
-    width: 23%; background-color: #C8B1E4;
+.view-cont .info p:last-child { 
+    font-size: 12px;
 }
-.video-cont .swiper-wrapper .swiper-slide .text .info-text {
-    padding: 30px 15px 20px;
-}
-.video-cont .swiper-wrapper .swiper-slide .text h1 {
-    font-size: 3.5rem;
-    margin-bottom: 30px;
-}
-.video-cont .swiper-wrapper .swiper-slide .text h2 {
-    font-size: 1.9rem;
-    margin-bottom: 20px;
-}
-.video-cont .swiper-wrapper .swiper-slide .text h3 {
-    font-size: 1.9rem; 
-    margin-bottom: 20px;
-}
-.video-cont .swiper-wrapper .swiper-slide .text h4 {
-    font-size: 1.4rem;
-}
-/* 영상 포폴 썸네일 */
-.video-thumb {
-    margin-top: 5rem;
-}
-.video-thumb .swiper-wrapper {}
-.video-thumb .swiper-wrapper .swiper-slide {
-    width: 100%; height: 100%;
-}
-.video-thumb .swiper-wrapper .swiper-slide .thumb-img {
-    width: 100%; height: 100%;
-    font-size: 0;
-}
-.video-thumb .swiper-wrapper .swiper-slide .thumb-img img {
-    width: 100%; height: 100%;
-}
-.video-thumb .swiper-wrapper .swiper-slide .text {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0; left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: 0.3s;
-}
-.video-thumb .swiper-wrapper .swiper-slide:hover .text {
-    opacity: 1;
-}
-.video-thumb .swiper-wrapper .swiper-slide .text h1 {
-    font-size: 2rem !important;
-}
+
+
 /* 서브포폴 */
-.sub-portfolio {
-    margin-top: 120px;
+/* 슬라이드 탭 */
+.tab-list2{
+    display: flex; justify-content: center; gap: 5px; margin-bottom: 20px; flex-wrap: wrap;
 }
-.sub-portfolio .sub-tabs {
-    display: flex;
+.tab-list2 li a{
+    padding: 0 20px; border: 1px solid rgba(0,0,0,.1); display: flex; align-items: center; height: 45px; border-radius: 30px; font-size: 1.4rem;
+}
+.tab-list2 li.active a{
+    background-color: #000; color: #fff;
+}
+/* 슬라이드영역 */
+.slide-wrap3{
+    position: relative; margin-bottom: 20px; height: auto;
+}
+.slide-wrap3 ul li{
+    height: auto; font-size: 1.5rem;
+}
+.slide-wrap3 ul li .imgbox{
+    position: relative; width: 100%; padding-bottom: 60%;
+}
+.slide-wrap3 ul li .imgbox img{
+    width: 100%; height: 100%; position: absolute; top: 0; left: 0;  object-fit: cover;
+}
+.work2 .slide-wrap3 ul li .txtbox{
+    text-align: center; 
+}
+.work2 .slide-wrap3 ul li .txtbox p.title{
+    margin-bottom: 5px; display: -webkit-box; overflow: hidden; word-break: break-all; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+}
+.modal2{
+    position: fixed; background-color: rgba(0,0,0,.5); top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 0; overflow: hidden; transition: 0.5s; z-index: 11;
+}
+.modal2.active{height: 100%;}
+.modal2 .modal-cont2{display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; transform: scale(0); transition: 0.5s;}
+.modal2 .modal-cont2.active{transform: scale(1);}
+.modal2 .view-player{width: 95%; max-width: 1600px; position: relative;}
+.modal2 .view-player::after{content: ""; padding-bottom: 56.25%; display: block;}
+.modal2 .view-player iframe{position: absolute; width: 100%; height: 100%; border: none;}
+.modal2 .view-img{width: 90%; max-width: 95%; max-height: 90%; overflow-y: scroll; font-size: 0; padding-right: 10px;}
+.modal2 .view-img img{width: 100%;}
+.modal2 .view-img::-webkit-scrollbar {width: 10px;}
+.modal2 .view-img::-webkit-scrollbar-thumb {background: coral; border-radius: 10px;}
+.modal2 .view-img::-webkit-scrollbar-track {background: #fff; border-radius: 10px;}
+
+/* 뷰모어 버튼 */
+.viewmore {
+    background-color: #9B72CF;
+    color: #F4EFFA;
     justify-content: center;
-    gap: 5rem;
-    margin-bottom: 20px;
-}
-.sub-portfolio .sub-tabs li {
-    font-size: 4rem; margin: 10px;
+    cursor: pointer;
     width: 180px; height: 50px;
     text-align: center;
-    color: #9B72CF;
+    line-height: 50px;
+    border-radius: 50px;
+    font-family: 'GmarketSansMedium';
+    margin: 20px auto;
 }
-.sub-portfolio .sub-tabs li.active a {
-    font-family: 'GmarketSansBold';
+.viewmore:hover {
+    background-color: #C8B1E4;
     color: #532B88;
-}
 
-.sub-portfolio .slide-wrap {
-    display: none;
 }
-.sub-portfolio .slide-wrap.active {
-    display: block;
-}
-
-.slide-wrap .sw-arrow {}
-.slide-wrap .sw-prev {}
-.slide-wrap .sw-next {}
-

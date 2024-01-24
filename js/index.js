@@ -1,4 +1,64 @@
 window.onload = function(){
+    // 스크롤 내리면 헤더 액티브
+    let header = document.querySelector(".header")
+    window.addEventListener("scroll",function(){
+        if(window.scrollY >= 1000){
+            header.classList.add("active")
+        }else{
+            header.classList.remove("active")
+        }
+    })
+    // 홈 영상
+    let video = document.querySelector("video")
+    // 프로그레스 바
+    let visualBar = document.querySelector(".progress")
+    let proBar = document.querySelector(".progress .bar")
+    video.addEventListener("timeupdate",function(){
+        let percent = (video.currentTime / video.duration) *100;
+        proBar.style.width = `${percent}%`
+    })
+
+    // 클릭시 원하는 위치 이동
+    visualBar.addEventListener("click", function(e){
+        let time = (e.offsetX / visualBar.offsetWidth) *video.duration
+        video.currentTime = time
+    })
+
+    // 재생 일시정지 버튼
+    let playBtn = document.querySelector(".play-btn")
+    function togglePlay(){
+        if(video.paused){
+            video.play()
+        }else{
+            video.pause()
+        }
+    }
+    playBtn.addEventListener("click",togglePlay)
+    video.addEventListener("click",togglePlay)
+    function updateBtn(){
+        let icon = this.paused ? `<i class="fa-solid fa-play fa-2x"></i>` : `<i class="fa-solid fa-pause fa-2x"></i>`
+        playBtn.innerHTML = icon
+    }
+    video.addEventListener("play", updateBtn)
+    video.addEventListener("pause", updateBtn)
+
+    // 음소거 기능 버튼
+    let volumeBtn = document.querySelector(".volume-btn")
+    volumeBtn.addEventListener("click", function(){
+        if(video.muted){
+            video.muted = false
+            volumeBtn.innerHTML = `<i class="fa-solid fa-volume-high fa-2x"></i>`
+        }else{
+            video.muted = true
+            volumeBtn.innerHTML = `<i class="fa-solid fa-volume-xmark fa-2x"></i>`
+        }
+    })
+    if(video.muted){
+        volumeBtn.innerHTML = `<i class="fa-solid fa-volume-xmark fa-2x"></i>`
+    }else{
+        volumeBtn.innerHTML = `<i class="fa-solid fa-volume-high fa-2x"></i>`
+    }
+
     // 스킬 프로그레스
     function progressBar(selector, gauge, color){
         var bar = new ProgressBar.Circle(selector, {
@@ -58,59 +118,11 @@ window.onload = function(){
     let proBlender = progressBar(".blender", 0, "#FF7021");
     observe.observe(skillSection)
 
+
     // 영상 포폴
-
-    let videoWrap = document.querySelector(".swiper2 ul")
-    let videoItem = document.querySelectorAll(".swiper-wrapper li")
-    let videoData;
-    const eventXhttp1 = new XMLHttpRequest();
-    eventXhttp1.open("GET", "viewvideobox_data.json");
-    eventXhttp1.send();
-    eventXhttp1.onreadystatechange = function(event){
-        const req = event.target;
-        if(req.readyState === XMLHttpRequest.DONE){
-            videoData = JSON.parse(req.response);
-            videoSection()
-        }
-    }
-    function videoSection(){
-        let videoListHtml = ``
-        for(let i = 0; i<videoData.item_count; i++){
-            let obj = videoData[`item_${i + 1}`];
-            let temp = `
-            <li class="swiper-slide">
-                <iframe src="https://www.youtube.com/embed/${obj.videoid}?autoplay" allowfullscreen></iframe>
-                <div class="text">
-                    <div class="info-text">
-                        <h1>${obj.title}</h1>
-                        <h2>작업기간 : ${obj.period}</h2>
-                        <h3>사용툴 : <br>${obj.tool}</h3>
-                        <h3><span>${obj.info}</span></h3>
-                        <h4>프로젝트 본인 기여도 : <span>${obj.per}</span></h4>
-                    </div>
-                </div>
-            </li>
-            `
-            videoListHtml += temp;
-        }
-        videoWrap.innerHTML = videoListHtml
-
-        let videoThumb = new Swiper(".swiper2",{
-            loop: true,
-            loopedSlides : 7
-            // effect : "fade"
-        })
-
-        videoItem.forEach(function(item, index){
-            item.addEventListener("click", function(){
-                let obj = videoData[`item_${index + 1}`];
-                modalCont.innerHTML =`<iframe src="https://www.youtube.com/embed/${obj.videoid}?autoplay=1&mute=1" allowfullscreen></iframe>`
-            })
-        })
-    }
-
-    let workWrap = document.querySelector(".swiper1 ul")
-    let workItem = document.querySelectorAll(".swiper-wrapper li")
+    let modal = document.querySelector(".modal")
+    let body = document.querySelector("body")
+    let workWrap = document.querySelector(".work ul")
     let workData;
     const eventXhttp = new XMLHttpRequest();
     eventXhttp.open("GET", "viewvideobox_data.json");
@@ -124,75 +136,163 @@ window.onload = function(){
     }
     function workSection(){
         let workListHtml = ``
-        for(let i = 0; i<workData.item_count; i++){
-            let obj = workData[`item_${i + 1}`];
+        for(let i = 0; i < workData.work.length; i++){
+            let obj = workData.work[i];
             let temp = `
-                <li class="swiper-slide">
+                <li>
                     <div class="thumb-img">
-                    <img src="https://img.youtube.com/vi/${obj.videoid}/mqdefault.jpg" alt="썸네일">
+                        <img src="https://img.youtube.com/vi/${obj.videoid}/mqdefault.jpg" alt="썸네일 이미지">
                     </div>
-                    <div class="text">
-                        <h1>${obj.cate}</h1>
-                        <h2>작업기간 : ${obj.period}</h2>
-                        <h3>사용툴 : ${obj.tool}</h3>
+                    <div class="view-cont">
+                        <div class="player">
+                            <iframe src="https://www.youtube.com/embed/${obj.videoid}?autoplay=1&mute=1" allowfullscreen></iframe>
+                        </div>
+                        <div class="info">
+                            <h1>${obj.title}</h1>
+                            <h2>작업기간 : ${obj.period}</h2>
+                            <h3>사용툴 : ${obj.tool}</h3>
+                            <p>${obj.info}.</p>
+                            <p>프로젝트 본인 기여도 ${obj.per}</p>
+                        </div>
                     </div>
                 </li>
             `
-            workListHtml += temp;
+            workListHtml += temp
         }
         workWrap.innerHTML = workListHtml
 
-        let videoThumb = new Swiper(".swiper1",{
-            loop: true,
-            spaceBetween : 10,
-            slidesPerView : 3,
-            centeredSlides : true,
-            loopedSlides : 7,
-            slideToClickedSlide : true
+        let workItems = document.querySelectorAll(".work ul li")
+    workItems.forEach(function(item,index){
+        item.addEventListener("click", function(){
+            modal.classList.add("active")
+            modal.innerHTML = item.querySelector(".view-cont").outerHTML;
+            body.classList.add("scrollfix")
         })
-
-        
-        workItem.forEach(function(item, index){
-            item.addEventListener("click", function(){
-                let obj = workData[`item_${index + 1}`];
-                modalCont.innerHTML =`<iframe src="https://www.youtube.com/embed/${obj.videoid}?autoplay=1&mute=1" allowfullscreen></iframe>`
-            })
-        })
+    })
+    modal.addEventListener("click",function(){
+            modal.classList.remove("active")
+            body.classList.remove("scrollfix")
+            modal.innerHTML = ""
+    })
     }
-
-    let videoCont = new Swiper(".video-cont",{
-        loop: true,
-        spaceBetween : 10,
-        loopedSlides : 7
-    })
-    let videoThumb = new Swiper(".video-thumb",{
-        loop: true,
-        spaceBetween : 10,
-        slidesPerView : 3,
-        centeredSlides : true,
-        loopedSlides : 7,
-        slideToClickedSlide : true
-    })
-    videoCont.controller.control = videoThumb
-    videoThumb.controller.control = videoCont
     
 
     // 서브 포폴 탭
-    let tabs = document.querySelectorAll(".sub-portfolio .sub-tabs li")
-    let tabCont = document.querySelectorAll(".sub-portfolio .slide-wrap")
+        let modal1 = document.querySelector(".modal2")
+        let modalCont = document.querySelector(".modal-cont2")
 
-    for(let i =0; i < tabs.length; i++){
-        tabs[i].onclick = function(event){
-            event.preventDefault();
-            for(let j =0; j< tabs.length; j++){
-                tabs[j].classList.remove("active")
-                tabCont[j].classList.remove("active")
+        let workData2;
+        const workXttp = new XMLHttpRequest();
+        workXttp.open("GET", "tabsubpofol_data.json");
+        workXttp.send();
+        workXttp.onreadystatechange = function(event){
+            const req = event.target;
+            if(req.readyState === XMLHttpRequest.DONE){
+                workData2 = JSON.parse(req.response);
+                parseWork(workData2);
             }
-            this.classList.add("active")
-            tabCont[i].classList.add("active")
+        };
+
+        function parseWork(_data){
+            let workCate = document.querySelector(".work2 .tab-list2");
+            workData2 = _data;
+            let tabHtml = ``;
+            let dataArr = _data.work;
+            for(let i = 0; i < dataArr.length; i++){
+                let html = `<li><a href="#">${dataArr[i].catename}</a></li>`;
+                tabHtml += html;
+            }
+            workCate.innerHTML = tabHtml;
+
+            let tabs = document.querySelectorAll(".work2 .tab-list2 li");
+            for(let i = 0; i < dataArr.length; i++){
+                tabs[0].classList.add("active");
+                console.log(tabs[i]);
+                tabs[i].addEventListener("click",function(event){
+                    event.preventDefault();
+                    workSlide(i)
+                    for(let j = 0; j<tabs.length; j++){
+                        tabs[j].classList.remove("active");
+                    }
+                    this.classList.add("active")
+                    
+                })
+                
+            }
+            workSlide(0)
+            
         }
-    }
-}
+        let workSwiper;
+        function workSlide(_idx){
+            let swworkHtml = ``;
+            let listData = workData2.work[_idx].list;
+            for(let i = 0; i < listData.length; i++){
+                let obj = listData[i];
+                let html = `
+                    <li class="swiper-slide">
+                        <div class="imgbox">
+                            <img src="https://img.youtube.com/vi/${obj.videoid}/maxresdefault.jpg" alt="" ${obj.videoid ? "style='display:block'" : "style='display:none'"}>
+                            <img src="../img/${obj.imgurl}" alt="" ${obj.imgurl ? "style='display:block'" : "style='display:none'"}>
+                        </div>
+                        <div class="txtbox">
+                            <p class="title">${obj.title}</p>
+                            <p class="writer" 
+                                ${obj.period ? "style='display:block'" : "style='display:none'"}>
+                                ${obj.period}
+                            </p>
+                        </div>
+                    </li>
+                `;
+                swworkHtml += html;
+            }
+            let swworkWrapper = document.querySelector(".sw-work3 .swiper-wrapper3");
+            swworkWrapper.innerHTML = swworkHtml;
+            
+            if(workSwiper){
+                workSwiper.destroy();
+            }
+            workSwiper = new Swiper(".sw-work3", {
+                slidesPerView: 1,
+                spaceBetween: 15,
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 25,
+                    },
+                },
+                navigation: {
+                    nextEl: ".work2 .sw-next",
+                    prevEl: ".work2 .sw-prev",
+                },
+            })
 
+            // 썸네일 클릭 > 모달 오픈
+            
+            let workItem = document.querySelectorAll(".sw-work3 li")
+            workItem.forEach(function(item, index){
+                item.addEventListener("click", function(){
+                    let obj = workData2.work[_idx].list[index];
+                    modal1.classList.add("active")
+                    modalCont.innerHTML = `
+                        <div class="view-img" ${obj.imgurl ? "style='display:block'" : "style='display:none'"}>
+                            <img src="../img/${obj.imgurl}" alt="">
+                        </div>
+                        <div class="view-player" ${obj.videoid ? "style='display:block'" : "style='display:none'"}>
+                            <iframe src="https://www.youtube.com/embed/${obj.videoid}" allowfullscreen></iframe>
+                        </div>
+                    `
+                    setTimeout(function(){
+                        modalCont.classList.add("active")
+                    },500)
+                    body.classList.add("scrollfix")
+                })
+            })
+            modal1.addEventListener("click", function(){
+                modal1.classList.remove("active")
+                modalCont.classList.remove("active")
+                body.classList.remove("scrollfix")
+                modalCont.innerHTML = ``
+            })
+        }
 
-    
+} 

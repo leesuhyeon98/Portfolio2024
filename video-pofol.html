@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video-portfolio</title>
+    <link rel="stylesheet" href="CSS/sub-common.css">
+    <style>
+        /* 헤더(인트로) */
+        .home {
+            height: 200px;
+            background-color: #C8B1E4;
+        }
+        .home .section-tet {
+            width: 500px;
+            margin: 0 auto;
+        }
+        .home .section-tet a {
+            width: 100%;
+        }
+        .home .section-tet img {
+            width: 100%;
+        }
+        .home .section-tet p {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #532B88;
+        }
+        /* 영상리스트 */
+        .work { padding: 10rem 0; }
+        .work ul { display: flex; gap: 30px 5%; flex-wrap: wrap; }
+        .work ul li { width: calc(90%/3); cursor: pointer; position: relative; }
+        .work ul li .thumb-img { width: 100%; }
+        .work ul li .thumb-img img { width: 100%; }
+        .work ul li .view-cont { display: none; }
+        /* 모달 */
+        .modal { width: 100%; height: 100%; position: fixed; 
+                background-color: rgba(0, 0, 0, 0.5); top: 0; left: 0; z-index: 11;
+                display: flex; justify-content: center; align-items: center;
+                opacity: 0; visibility: hidden; transition: 0.5s;
+        }
+        .modal.active {
+            opacity: 1; visibility: visible;
+        }
+        /* 모달 사이드설명 */
+        .view-cont { display: flex; width: 95%; }
+        .view-cont .player { position: relative; width: 70%; }
+        .view-cont .player::after { padding-bottom: 56.25%; content: ""; display: block; }
+        .view-cont .player iframe { position: absolute; width: 100%; height: 100%; border: none; }
+        .view-cont .info { width: 30%; background-color: aliceblue; padding: 30px;}
+        .view-cont .info h1 { font-size: 30px; }
+        .view-cont .info h2 { font-size: 20px; }
+        .view-cont .info h3 { font-size: 20px; }
+        .view-cont .info p { 
+            font-size: 18px; line-height: 25px;
+            margin-top: 20px;
+        }
+        .view-cont .info p:last-child { 
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <section class="home">
+        <div class="inner">
+            <div class="section-tet">
+                <a href="index.html">
+                    <img src="img/MOSS-logo3.png" alt="logo">
+                </a>
+                <p>- Motion Graphics -</p>
+            </div>
+        </div>
+    </section>
+    <section class="work">
+        <div class="inner">
+            <ul>
+                <!-- <li>
+                    <div class="thumb-img">
+                        <img src="https://img.youtube.com/vi/u9eehcAHhi8/maxresdefault.jpg" alt="">
+                    </div>
+                    <div class="view-cont">
+                        <div class="player">
+                            <iframe src="https://www.youtube.com/embed/u9eehcAHhi8?autoplay=1&mute=1" allowfullscreen></iframe>
+                        </div>
+                        <div class="info">
+                            <h1>카테고리 : 모션그래픽</h1>
+                            <h2>작업기간 : 1주일</h2>
+                            <h3>사용툴 : 일러스트, 프리미어...</h3>
+                        </div>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </section>
+    <div class="modal">
+    </div>
+</body>
+</html>
+<script>
+    let modal = document.querySelector(".modal")
+    let body = document.querySelector("body")
+    let workWrap = document.querySelector(".work ul")
+    let workData;
+    const eventXhttp = new XMLHttpRequest();
+    eventXhttp.open("GET", "viewvideobox_data.json");
+    eventXhttp.send();
+    eventXhttp.onreadystatechange = function(event){
+        const req = event.target;
+        if(req.readyState === XMLHttpRequest.DONE){
+            workData = JSON.parse(req.response);
+            workSection()
+        }
+    }
+    function workSection(){
+        let workListHtml = ``
+        for(let i = 0; i < workData.work.length; i++){
+            let obj = workData.work[i];
+            let temp = `
+                <li>
+                    <div class="thumb-img">
+                        <img src="https://img.youtube.com/vi/${obj.videoid}/mqdefault.jpg" alt="썸네일 이미지">
+                    </div>
+                    <div class="view-cont">
+                        <div class="player">
+                            <iframe src="https://www.youtube.com/embed/${obj.videoid}?autoplay=1&mute=1" allowfullscreen></iframe>
+                        </div>
+                        <div class="info">
+                            <h1>${obj.title}</h1>
+                            <h2>작업기간 : ${obj.period}</h2>
+                            <h3>사용툴 : ${obj.tool}</h3>
+                            <p>${obj.info}.</p>
+                            <p>프로젝트 본인 기여도 ${obj.per}</p>
+                        </div>
+                    </div>
+                </li>
+            `
+            workListHtml += temp
+        }
+        workWrap.innerHTML = workListHtml
+
+        let workItems = document.querySelectorAll(".work ul li")
+    workItems.forEach(function(item,index){
+        item.addEventListener("click", function(){
+            modal.classList.add("active")
+            modal.innerHTML = item.querySelector(".view-cont").outerHTML;
+            body.classList.add("scrollfix")
+        })
+    })
+    modal.addEventListener("click",function(){
+            modal.classList.remove("active")
+            body.classList.remove("scrollfix")
+            modal.innerHTML = ""
+    })
+    }
+
+</script>

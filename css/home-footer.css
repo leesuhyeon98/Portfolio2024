@@ -1,0 +1,132 @@
+body {
+    overflow-x: hidden;
+}
+/* 헤더 */
+.header {
+    width: 100%; height: 7rem;
+    /* background-color: #F4EFFA; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+}
+.header.active {
+    background-color: transparent;
+    backdrop-filter: blur(1px);
+}
+.header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.header .inner .logo {
+    height: 6rem;
+}
+.header .inner .logo a {
+    height: 100%;
+}
+.header .inner .logo a  img {
+    height: 100%;
+    object-fit: cover;
+}
+/* 헤더 네비게이션 */
+.header .header-manu {
+    width: 600px; height: 100%;
+}
+.header .header-manu > ul {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.header .header-manu > ul > li {
+    flex: 1; position: relative;
+    color: #9B72CF;
+}
+.header .header-manu > ul > li:hover {
+    color: #532B88;
+}
+.header .header-manu > ul > li > a {
+    text-align: center;
+    display: block;
+}
+
+/* 포폴 서브메뉴 네비 */
+.header-manu ul li .sub-manu {
+    position: absolute; top: 5rem; width: 100%;
+    /* background-color: #F4EFFA; */
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    color: #9B72CF;
+}
+.header-manu ul li .sub-manu li {
+    font-size: 1.5rem;
+    height: 5rem;
+    line-height: 5rem;
+}
+.header-manu ul li .sub-manu li:hover {
+    color: #532B88;
+    transition: 0.3s;
+}
+.header-manu ul li .sub-manu li a {
+    display: block;
+    text-align: center;
+}
+.header-manu ul li:hover .sub-manu {
+    height: 20rem;
+}
+
+/* 홈 인트로 */
+.visual {
+    position: relative;
+    width: 100%; height: 100vh;
+    text-align: center;
+}
+.visual video {
+    height: 100%;
+}
+
+/* 영상 컨트롤러 */
+.visual .video-controls {
+    position: absolute; left: 50%; bottom: 3%; width: 100%;
+    max-width: 1650px;
+    transform: translate(-50%);
+    display: flex; gap: 2%; align-items: center;
+    
+}
+.visual .video-controls .pro-bar {
+    width: 100%; height: 10px;
+    background-color: rgba(199, 212, 236, 0.3);
+}
+.visual .video-controls .pro-bar .bar {
+    height: 100%; background-color: rgb(30, 76, 163);
+}
+
+/* 푸터 */
+.footer {
+    margin-top: 150px;
+    width: 100%;
+    background-color: #2F184B;
+}
+.footer .contact {
+    width: 60%; height: 100%;
+}
+.footer .contact ul {
+    display: flex; justify-content: space-between;
+    position: absolute; left: 50%; top: 20%;
+    transform: translate(-50%);
+}
+.footer .contact ul li {
+    width: 50px; height: 50px;
+    margin: 0px 50px;
+}
+.footer .contact ul li a {}
+.footer .contact ul li a img {}
+.footer p {
+    padding: 160px 0px 50px;
+    color: #F4EFFA;
+    text-align: center;
+    font-family: 'GmarketSansLight';
+    letter-spacing: 4px;
+}
