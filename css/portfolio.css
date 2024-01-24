@@ -65,7 +65,7 @@
     position: relative; margin-bottom: 20px; height: auto;
 }
 .slide-wrap3 ul li{
-    height: auto; font-size: 1.5rem;
+    height: auto; font-size: 1.5rem; width: calc(100%/3);
 }
 .slide-wrap3 ul li .imgbox{
     position: relative; width: 100%; padding-bottom: 60%;
