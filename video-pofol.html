@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>video-portfolio</title>
+    <!-- <script src="js/prefixfree.min.js"></script> -->
     <link rel="stylesheet" href="CSS/sub-common.css">
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style media data-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></style>
     <style>
         /* 헤더(인트로) */
         .home {
@@ -28,7 +32,11 @@
             color: #532B88;
         }
         /* 영상리스트 */
-        .work { padding: 10rem 0; }
+        .work { padding: 4rem 0; }
+        .work .go-home { 
+            color: #9B72CF; text-align: center;
+            margin-bottom: 4rem;
+        }
         .work ul { display: flex; gap: 30px 5%; flex-wrap: wrap; }
         .work ul li { width: calc(90%/3); cursor: pointer; position: relative; }
         .work ul li .thumb-img { width: 100%; }
@@ -57,7 +65,7 @@
             margin-top: 20px;
         }
         .view-cont .info p:last-child { 
-            font-size: 12px;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -68,12 +76,17 @@
                 <a href="index.html">
                     <img src="img/MOSS-logo3.png" alt="logo">
                 </a>
-                <p>- Motion Graphics -</p>
+                <p>- Video Portfolio -</p>
             </div>
         </div>
     </section>
     <section class="work">
         <div class="inner">
+            <div class="go-home">
+                <a href="index.html">
+                    <i class="fa-solid fa-house-chimney fa-2x"></i>
+                </a>
+            </div>
             <ul>
                 <!-- <li>
                     <div class="thumb-img">

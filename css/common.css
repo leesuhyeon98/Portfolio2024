@@ -19,6 +19,9 @@ body{font-size: 1.6rem; color: #222;
 h1 { font-family: 'SBAggroB' }
 /* custom  */
 body.scrollfix { overflow: hidden; }
+body::-webkit-scrollbar {
+    display: none;
+}
 .inner{
     max-width: 1400px; padding: 0 20px; width: 100%; 
     position: relative; margin: 0 auto;
@@ -31,7 +34,7 @@ body.scrollfix { overflow: hidden; }
     opacity: 0.4;
 }
 .in-box {
-    width: 400px; height: 240px;
+    width: 400px; height: 270px;
     background-color: #C8B1E4;
     border-radius: 15px;
     position: absolute;

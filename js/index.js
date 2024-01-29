@@ -229,7 +229,7 @@ window.onload = function(){
             for(let i = 0; i < listData.length; i++){
                 let obj = listData[i];
                 let html = `
-                    <li class="swiper-slide">
+                    <li>
                         <div class="imgbox">
                             <img src="https://img.youtube.com/vi/${obj.videoid}/maxresdefault.jpg" alt="" ${obj.videoid ? "style='display:block'" : "style='display:none'"}>
                             <img src="../img/${obj.imgurl}" alt="" ${obj.imgurl ? "style='display:block'" : "style='display:none'"}>
@@ -245,13 +245,13 @@ window.onload = function(){
                 `;
                 swworkHtml += html;
             }
-            let swworkWrapper = document.querySelector(".sw-work3 .swiper-wrapper3");
+            let swworkWrapper = document.querySelector(".slide-wrap3 ul");
             swworkWrapper.innerHTML = swworkHtml;
             
             if(workSwiper){
                 workSwiper.destroy();
             }
-            workSwiper = new Swiper(".sw-work3", {
+            workSwiper = new Swiper(".slide-wrap3", {
                 slidesPerView: 1,
                 spaceBetween: 15,
                 breakpoints: {
@@ -259,16 +259,12 @@ window.onload = function(){
                         slidesPerView: 3,
                         spaceBetween: 25,
                     },
-                },
-                navigation: {
-                    nextEl: ".work2 .sw-next",
-                    prevEl: ".work2 .sw-prev",
-                },
+                }
             })
 
             // 썸네일 클릭 > 모달 오픈
             
-            let workItem = document.querySelectorAll(".sw-work3 li")
+            let workItem = document.querySelectorAll(".slide-wrap3 ul li")
             workItem.forEach(function(item, index){
                 item.addEventListener("click", function(){
                     let obj = workData2.work[_idx].list[index];

@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design-portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style media data-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></style>
+    <!-- <script src="js/prefixfree.min.js"></script> -->
+    <link rel="stylesheet" href="CSS/sub-common.css">
+    <style>
+        /* 헤더(인트로) */
+        .home {
+            height: 200px;
+            background-color: #C8B1E4;
+        }
+        .home .section-tet {
+            width: 500px;
+            margin: 0 auto;
+        }
+        .home .section-tet a {
+            width: 100%;
+        }
+        .home .section-tet img {
+            width: 100%;
+        }
+        .home .section-tet p {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #532B88;
+        }
+        /* 포폴 */
+        /* 슬라이드 탭 */
+.work2 {
+    padding: 4rem 0; 
+}
+.work2 .go-home { 
+    color: #9B72CF; text-align: center;
+    margin-bottom: 4rem;
+}
+.tab-list2{
+    display: flex; justify-content: center; gap: 5px; margin-bottom: 40px; flex-wrap: wrap;
+}
+.tab-list2 li a{
+    padding: 0 20px; display: flex; align-items: center; height: 45px; border-radius: 30px; font-size: 2rem;
+    color: #9B72CF;
+}
+.tab-list2 li.active a{
+    background-color: #532B88; color: #fff;
+}
+/* 슬라이드영역 */
+.slide-wrap3{
+    position: relative; margin-bottom: 20px; height: auto;
+}
+.slide-wrap3 ul {
+    display: flex; flex-wrap: wrap; gap: 5%;
+}
+.slide-wrap3 ul li{
+    height: auto; font-size: 1.5rem; 
+    width: calc(90%/3); margin-bottom: 1.5rem;
+}
+.slide-wrap3 ul li:hover {
+    cursor: pointer;
+}
+.slide-wrap3 ul li .imgbox{
+    position: relative; width: 100%; padding-bottom: 60%;
+}
+.slide-wrap3 ul li .imgbox img{
+    width: 100%; height: 100%; position: absolute; top: 0; left: 0;  object-fit: cover;
+}
+.work2 .slide-wrap3 ul li .txtbox{
+    text-align: center; margin-top: 1rem; color: #9B72CF;
+}
+.work2 .slide-wrap3 ul li .txtbox p.title{
+    margin-bottom: 5px; display: -webkit-box; overflow: hidden; word-break: break-all; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    font-family: 'SBAggroM'; font-size: 2rem; color: #2F184B; margin-bottom: 1rem;
+}
+
+.modal2{
+    position: fixed; background-color: rgba(0,0,0,.5); top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 0; overflow: hidden; transition: 0.5s; z-index: 11;
+}
+.modal2.active{height: 100%;}
+.modal2 .modal-cont2{display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; transform: scale(0); transition: 0.5s;}
+.modal2 .modal-cont2.active{transform: scale(1);}
+.modal2 .view-player{width: 100%; max-width: 1000px;
+                    position: relative; 
+}
+.modal2 .view-player::after{content: ""; padding-bottom: 56.25%; display: block;}
+/* .modal2 .view-player iframe{ width: 70%; height: 100%; border: none;
+                            top: 0; left: 0; position: absolute;
+} */
+
+.modal2 .view-img{width: 90%; max-width: 95%; max-height: 90%;
+    overflow-y: scroll; font-size: 0; padding-right: 10px; display: flex; }
+.modal2 .view-img img{ width: 70%; height: 100%; }
+.modal2 .view-img .info { width: 30%; background-color: #F4EFFA; 
+                        display: inline-block; position: sticky; top: 0;
+                        padding: 50px 20px; color: #2F184B;
+}
+.modal2 .view-img .info h1 { font-size: 20px; margin-bottom: 1.5rem; 
+    color: #9B72CF;
+}
+.modal2 .view-img .info h2 { font-size: 30px; font-family: 'SBAggroM'; 
+    margin-bottom: 1.5rem; 
+}
+.modal2 .view-img .info h3 { font-size: 16px; color: #9B72CF; margin-bottom: 1rem;}
+.modal2 .view-img .info p { font-size: 19px; margin: 2rem 0; line-height: 30px;}
+.modal2 .view-img .info p:last-child { font-size: 14px; }
+.modal2 .view-img::-webkit-scrollbar {width: 10px;}
+.modal2 .view-img::-webkit-scrollbar-thumb {background: #532B88; border-radius: 10px;}
+.modal2 .view-img::-webkit-scrollbar-track {background: #F4EFFA; border-radius: 10px;}
+    </style>
+</head>
+<body>
+    <section class="home">
+        <div class="inner">
+            <div class="section-tet">
+                <a href="index.html">
+                    <img src="img/MOSS-logo3.png" alt="logo">
+                </a>
+                <p>- Design Portfolio -</p>
+            </div>
+        </div>
+    </section>
+    <section class="work2">
+        <div class="inner">
+            <div class="go-home">
+                <a href="index.html">
+                    <i class="fa-solid fa-house-chimney fa-2x"></i>
+                </a>
+            </div>
+            <ul class="tab-list2">
+                <!-- json연동 -->
+                <!-- 
+                    <li class="active"><a href="javascript:;">motion</a></li>
+                -->
+            </ul>
+            <div class="slide-wrap3">
+                <ul>
+                        
+                </ul>
+                
+            </div>
+        </div>
+    </section>
+    <div class="modal2">
+        <div class="modal-cont2">
+            <!-- <div class="view-img">
+                <img src="../img/poster.jpg" alt="">
+                <div class="info">
+                    <h1>${obj.title}</h1>
+                    <h2>${obj.name}</h2>
+                    <h2>작업기간 : ${obj.period}</h2>
+                    <h3>사용툴 : ${obj.tool}</h3>
+                    <p>${obj.info}.</p>
+                    <p>프로젝트 본인 기여도 ${obj.per}</p>
+                </div>
+            </div>
+            <div class="view-player">
+                <iframe src="https://www.youtube.com/embed/u9eehcAHhi8" allowfullscreen></iframe>
+            </div> -->
+        </div>
+    </div>
+</body>
+</html>
+<script>
+        let modal1 = document.querySelector(".modal2")
+        let modalCont = document.querySelector(".modal-cont2")
+        let body = document.querySelector("body")
+
+        let workData2;
+        const workXttp = new XMLHttpRequest();
+        workXttp.open("GET", "tabsubpofol_data.json");
+        workXttp.send();
+        workXttp.onreadystatechange = function(event){
+            const req = event.target;
+            if(req.readyState === XMLHttpRequest.DONE){
+                workData2 = JSON.parse(req.response);
+                parseWork(workData2);
+            }
+        };
+
+        function parseWork(_data){
+            let workCate = document.querySelector(".work2 .tab-list2");
+            workData2 = _data;
+            let tabHtml = ``;
+            let dataArr = _data.work;
+            for(let i = 0; i < dataArr.length; i++){
+                let html = `<li><a href="#">${dataArr[i].catename}</a></li>`;
+                tabHtml += html;
+            }
+            workCate.innerHTML = tabHtml;
+
+            let tabs = document.querySelectorAll(".work2 .tab-list2 li");
+            for(let i = 0; i < dataArr.length; i++){
+                tabs[0].classList.add("active");
+                console.log(tabs[i]);
+                tabs[i].addEventListener("click",function(event){
+                    event.preventDefault();
+                    workSlide(i)
+                    for(let j = 0; j<tabs.length; j++){
+                        tabs[j].classList.remove("active");
+                    }
+                    this.classList.add("active")
+                    
+                })
+                
+            }
+            workSlide(0)
+            
+        }
+        let workSwiper;
+        function workSlide(_idx){
+            let swworkHtml = ``;
+            let listData = workData2.work[_idx].list;
+            for(let i = 0; i < listData.length; i++){
+                let obj = listData[i];
+                let html = `
+                    <li>
+                        <div class="imgbox">
+                            <img src="img/${obj.imgurl}" alt="" ${obj.imgurl ? "style='display:block'" : "style='display:none'"}>
+                        </div>
+                        <div class="txtbox">
+                            <p class="title">${obj.title}</p>
+                            <p class="writer" 
+                                ${obj.period ? "style='display:block'" : "style='display:none'"}>
+                                ${obj.period}
+                            </p>
+                        </div>
+                    </li>
+                `;
+                swworkHtml += html;
+            }
+            let swworkWrapper = document.querySelector(".slide-wrap3 ul");
+            swworkWrapper.innerHTML = swworkHtml;
+            
+            if(workSwiper){
+                workSwiper.destroy();
+            }
+            workSwiper = new Swiper(".slide-wrap3", {
+                slidesPerView: 1,
+                spaceBetween: 15,
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 25,
+                    }
+                }
+            })
+
+            // 썸네일 클릭 > 모달 오픈
+            
+            let workItem = document.querySelectorAll(".slide-wrap3 ul li")
+            workItem.forEach(function(item, index){
+                item.addEventListener("click", function(){
+                    let obj = workData2.work[_idx].list[index];
+                    modal1.classList.add("active")
+                    modalCont.innerHTML = `
+                        <div class="view-img" ${obj.imgurl}>
+                            <img src="img/${obj.imgurl}" alt="">
+                            <div class="info" "style='top:0'">
+                                <h1>${obj.title}</h1>
+                                <h2>${obj.name}</h2>
+                                <h3>작업기간 : ${obj.period}</h3>
+                                <h3>사용툴 : ${obj.tool}</h3>
+                                <p>${obj.info}.</p>
+                                <p>프로젝트 본인 기여도 ${obj.per}</p>
+                            </div>
+                        </div>
+                    `
+                    setTimeout(function(){
+                        modalCont.classList.add("active")
+                    },500)
+                    body.classList.add("scrollfix")
+                })
+            })
+            modal1.addEventListener("click", function(){
+                modal1.classList.remove("active")
+                modalCont.classList.remove("active")
+                body.classList.remove("scrollfix")
+                modalCont.innerHTML = ``
+            })
+
+        }
+//         $(window).scroll(function(){
+//     $(".a").stop().animate({top: $(window).scrollTop()+200})
+//   })
+        
+    
+
+</script>

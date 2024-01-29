@@ -1,113 +1,217 @@
 {
     "work" : [
         {
-            "catename" : "POSTER1",
+            "catename" : "Project",
             "list":[
-                {
-                    "imgurl": "web2.jpg",
-                    "alt":"WEB THUMB",
-                    "title":"MOVING POSTER1",
-                    "period":"1week",
-                    "afterEffect" : "used",
-                    "premiere" : "used"
-                },
                 {
                     "imgurl": "web1.jpg",
                     "alt":"WEB THUMB",
-                    "title":"MOVING POSTER2",
-                    "period":"1week",
-                    "afterEffect" : "used",
-                    "premiere" : "used"
-                },
-                {
-                    "imgurl": "design3.jpg",
-                    "alt":"WEB THUMB",
-                    "title":"MOVING POSTER3",
-                    "period":"1week",
-                    "afterEffect" : "used",
-                    "premiere" : "used"
-                },
-                {
-                    "imgurl": "design4.jpg",
-                    "alt":"WEB THUMB",
-                    "title":"MOVING POSTER4",
-                    "period":"1week",
-                    "afterEffect" : "used",
-                    "premiere" : "used"
-                }
-            ]
-        },
-        {
-            "catename" : "POSTER2",
-            "list":[
-                {
-                    "imgurl": "design4.jpg",
-                    "alt":"WEB THUMB",
-                    "title":"MOVING POSTER1",
-                    "period":"1week",
-                    "afterEffect" : "used",
-                    "premiere" : "used"
-                },
-                {
-                    "imgurl": "web1.jpg",
-                    "alt":"WEB THUMB",
-                    "title":"MOVING POSTER2",
-                    "period":"1week",
-                    "afterEffect" : "used",
-                    "premiere" : "used"
+                    "title":"Web Design",
+                    "name": "봉화군청 사이트 리뉴얼<br>- 메인페이지 -",
+                    "period":"5week",
+                    "tool": "아톰, 일러스트, 포토샵",
+                    "info": "기존 군청 사이트는 지역민 연령 대비 가독성이 낮고, 작은 사이즈의 텍스트 요소가 많아 사용자에 맞지 않는 레이아웃이여서 리뉴얼 사이트로 선정했습니다.<br>지역민 연령대에 맞춰서 텍스트의 사이즈를 크게 했으며, 일러스트를 활용해 텍스트가 잘 안보이더라도 알아볼 수 있게 했습니다. 그리고 기존 사이트에는 해당 지역의 사진 첨부가 다소 적어 해당 지역의 관광지 사진들을 이용해 관광지를 강조하여 지역 관광 활성화를 높일 수 있는 방향으로 기획하고 제작했습니다",
+                    "per":"98%"
                 },
                 {
                     "imgurl": "web2.jpg",
                     "alt":"WEB THUMB",
-                    "title":"MOVING POSTER3",
-                    "period":"1week",
-                    "afterEffect" : "used",
-                    "premiere" : "used"
+                    "title":"Web Design",
+                    "name": "봉화군청 사이트 리뉴얼<br>- 서브페이지 -",
+                    "period":"4week",
+                    "tool": "아톰, 일러스트, 포토샵",
+                    "info": "기존 군청 사이트는 지역민 연령 대비 가독성이 낮고, 작은 사이즈의 텍스트 요소가 많아 사용자에 맞지 않는 레이아웃이여서 리뉴얼 사이트로 선정했습니다.<br>지역민 연령대에 맞는 사이즈의 텍스트로 변경했으며, 눈이 피로하지 않은 파랑과, 초록을 메인 컬러로 지정해서 가독성을 높이고 레이아웃은 간단하고 심플해 한번에 시선을 사로잡는 스타일로 기획해 제작했습니다",
+                    "per":"98%"
                 },
                 {
-                    "imgurl": "design4.jpg",
+                    "imgurl": "web4.png",
                     "alt":"WEB THUMB",
-                    "title":"MOVING POSTER4",
-                    "period":"1week",
-                    "afterEffect" : "used",
-                    "premiere" : "used"
+                    "title":"Web Design",
+                    "name": "라스베이거스 패키지 여행<br>프로모션 상세페이지 Ver.1",
+                    "period":"2week",
+                    "tool": "일러스트, 포토샵",
+                    "info": "패키지 여행 프로모션을 기획하고 기획한 프로모션에 맞는 상세페이지를 제작했습니다.<br>여행지를 관광과 도박의 도시인 라스베이거스로 정했기 때문에 한번뿐인 인생을 즐기자는 의미 yolo를 사용해 투어 브랜드명을 정하고, 이외의 투어 이용연령대, 일정등을 정하였으며 화려하고 부자처럼 즐기는 컨셉이라 소개 영역 배경 부분에 패턴을 넣어 화려한 느낌을 주었으며 보라와 옐로우 컬러를 사용해서 고급스러움을 강조했습니다.<br>그리고 여행 고객들의 눈을 사로잡기 위해 투어 일정에 맞는 관련 이미지중에 가장 웅장하고 고화질의 이미지를 사용하고 한눈에 알아볼 수 있게 심플한 레이아웃을 이용해 가독성을 높였다",
+                    "per":"98%"
+                },
+                {
+                    "imgurl": "web3.png",
+                    "alt":"WEB THUMB",
+                    "title":"Web Design",
+                    "name": "라스베이거스 패키지 여행<br>프로모션 상세페이지 Ver.2",
+                    "period":"1.5week",
+                    "tool": "일러스트, 포토샵",
+                    "info": "패키지 여행 프로모션을 기획하고 기획한 프로모션에 맞는 상세페이지 Ver.1를 기반으로 다른 스타일의 상세페이지를 제작했습니다.<br>처음 보이는 상단의 메인에 유명 관광지 중 하나인 그랜드 캐년 이미지를 넣어 자연의 웅장함과 아름다움을 강조하고, 투어 일정의 핵심 포인트를 뽑아 넣었습니다.<br>전체적으로 화려한 밤의 도시 라스베이거스를 표현하기 위해서 배경이미지등을 어두운 이미지를 넣고 텍스트는 밝은 컬러를 사용해 대비를 줘서 가독성을 높이는 방향으로 기획 제작하였습니다",
+                    "per":"100%"
+                },
+                {
+                    "imgurl": "web5.jpg",
+                    "alt":"WEB THUMB",
+                    "title":"Web Design",
+                    "name": "온리비 사이트 리뉴얼",
+                    "period":"2days",
+                    "tool": "포토샵, 일러스트",
+                    "info": "패키지 여행 프로모션을 기획하고 기획한 프로모션에 맞는 상세페이지 Ver.1를 기반으로 다른 스타일의 상세페이지를 제작했습니다.<br>처음 보이는 상단의 메인에 유명 관광지 중 하나인 그랜드 캐년 이미지를 넣어 자연의 웅장함과 아름다움을 강조하고, 투어 일정의 핵심 포인트를 뽑아 넣었습니다.<br>전체적으로 화려한 밤의 도시 라스베이거스를 표현하기 위해서 배경이미지등을 어두운 이미지를 넣고 텍스트는 밝은 컬러를 사용해 대비를 줘서 가독성을 높이는 방향으로 기획 제작하였습니다",
+                    "per":"100%"
+                },
+                {
+                    "imgurl": "web6.png",
+                    "alt":"WEB THUMB",
+                    "title":"Web Design",
+                    "name": "ㅇㅅㅅㅈ 상세페이지",
+                    "period":"4days",
+                    "tool": "미리캔버스",
+                    "info": "아이디어스 라인드로잉 상품의 상세페이지를 미리캔버스를 사용해 기획 제작했습니다.<br>제품을 설명하는 상세페이지인만큼 필요한 정보와 정보를 이해시켜주는 최소한의 이미지로 구성 하였으며, 부드럽고 동글동글한 분위기의 손글씨 폰트와 귀여운 오브젝트로 배치해 아기자기하게 제작되었습니다 ",
+                    "per":"100%"
+                },
+                {
+                    "imgurl": "phonecase2.jpg",
+                    "alt":"WEB THUMB",
+                    "title":"Phone Case",
+                    "name": "박효신 일러스트 폰케이스",
+                    "period":"2days",
+                    "tool": "일러스트, 포토샵",
+                    "info": "주변 박효신 팬의 요청으로 개인 소장용 박효신 굿즈 폰케이스를 기획 제작하였습니다.<br>박효신의 공연 이미지를 찾아서 일러스트를 사용해 라인드로잉으로 만들고, 픽사베이에서 찾은 은하수 이미지를 배경으로 사용하여 신비로운 느낌을 주었습니다",
+                    "per":"100%"
+                },
+                {
+                    "imgurl": "phonecase3.jpg",
+                    "alt":"WEB THUMB",
+                    "title":"Phone Case",
+                    "name": "캐릭터 폰케이스 -토마토 패턴-",
+                    "period":"2days",
+                    "tool": "일러스트, 포토샵",
+                    "info": "실생활에서 주제를 잡고 캐릭터로 제작 후 캐릭터를 이용해 폰케이스 제작을 기획했습니다.<br>방울 토마토를 주제로 캐릭터를 만들고, 패턴으로 만들어 귀여운 분위기의 폰케이스를 제작하였습니다",
+                    "per":"100%"
+                },
+                {
+                    "imgurl": "phonecase4.jpg",
+                    "alt":"WEB THUMB",
+                    "title":"Phone Case",
+                    "name": "캐릭터 폰케이스 -아보카도 패턴-",
+                    "period":"1days",
+                    "tool": "일러스트, 포토샵",
+                    "info": "실생활에서 주제를 잡고 캐릭터로 제작 후 캐릭터를 이용해 폰케이스 제작을 기획했습니다.<br>아보카도를 주제로 캐릭터를 만들고, 패턴으로 만들어 귀여운 분위기의 폰케이스를 제작하였습니다",
+                    "per":"100%"
+                },
+                {
+                    "imgurl": "teacoster1.jpg",
+                    "alt":"WEB THUMB",
+                    "title":"Goods Design",
+                    "name": "유큐리바 코스터",
+                    "period":"4days",
+                    "tool": "일러스트",
+                    "info": "일본 도쿄에 있는 오키나와 스타일 바의 캐릭터를 제작하고 그 캐릭터를 이용해 티코스터를 제작 기획했습니다.<br>오키나와 스타일 바여서 오키나와 풍속의 한 형태인 액막이 토기 사자를 이용해 캐릭터를 제작했으며, 해당 바의 특성상 잔의 받침으로 제작을 기획했다.<br>대부분의 메뉴가 차가운 음료여서 잔의 이슬 맺힘을 고려하여 물을 흡수할수있는 코르크 재질의 코스터로 제작했습니다",
+                    "per":"100%"
                 }
             ]
         },
         {
-            "catename" : "POSTER3",
+            "catename" : "Graphic",
             "list":[
                 {
-                    "imgurl": "design1.jpg",
+                    "imgurl": "card1.jpg",
                     "alt":"WEB THUMB",
-                    "title":"MOVING POSTER1",
-                    "period":"1week",
-                    "afterEffect" : "used",
-                    "premiere" : "used"
+                    "title":"Business card",
+                    "name": "평리 식육점 명함",
+                    "period":"3days",
+                    "tool": "일러스트, 포토샵",
+                    "info": "한우를 취급하는 식육점 명함을 주제로 한국적이면서 붓 텍스처 느낌을 주었습니다.<br>심볼형 로고는 프리픽에서 소 일러스트를 사용하여 평리 식육점의 로고와 연결해 끊김없이 부드러운 이미지와 좋은 등급의 한우를 취급하는 식육점임을 강조하기 위해서 우측 상단의 한우 도장을 새겨넣었습니다",
+                    "per":"100%"
                 },
                 {
-                    "imgurl": "design2.jpg",
+                    "imgurl": "card2.jpg",
+                    "alt":"WEB THUMB",
+                    "title":"Business card",
+                    "name": "Korean style 명함",
+                    "period":"1week",
+                    "tool": "일러스트, 포토샵",
+                    "info": "한국 전통적인 디자인을 주제를 기획해 제작했으며, 전통문양을 배치해서 한국미를 살렸고 후작업으로 금박을 넣어 고급스러운 분위기를 표현했습니다.<br>전체적으로 미니멀리즘하고 단아해보이게 디자인 했습니다",
+                    "per":"100%"
+                },
+                {
+                    "imgurl": "character-Lanny.jpg",
+                    "alt":"WEB THUMB",
+                    "title":"Character-Lanny",
+                    "name": "토끼 캐릭터 래니",
+                    "period":"3days",
+                    "tool": "일러스트",
+                    "info": "계묘년을 맞아 토끼 캐릭터를 기획하였으며, 미국 카툰 캐릭터의 특징인 눈과 주근깨를 활용해 맑눈광이 포인트인 캐릭터로 제작되었습니다.<br>전체적으로 동글동글하고 곡선으로 부드러운 이미지의 하이틴 재질의 토끼 캐릭터입니다",
+                    "per":"100%"
+                },
+                {
+                    "imgurl": "graphic1.png",
+                    "alt":"WEB THUMB",
+                    "title":"Topper+Card",
+                    "name": "어버이날 용돈카드 토퍼 -Ver.Mom-",
+                    "period":"2days",
+                    "tool": "프리미어프로, 애프터이펙트",
+                    "info": "이러한 의도로 이렇게 의도했다요 개망했다요 어떡하다요030",
+                    "per":"20%"
+                },
+                {
+                    "imgurl": "graphic2.png",
+                    "alt":"WEB THUMB",
+                    "title":"Topper+Card",
+                    "name": "어버이날 용돈카드 토퍼 -Ver.Dad-",
+                    "period":"2days",
+                    "tool": "프리미어프로, 애프터이펙트",
+                    "info": "이러한 의도로 이렇게 의도했다요 개망했다요 어떡하다요030",
+                    "per":"20%"
+                },
+                {
+                    "imgurl": "teacoster.png",
+                    "alt":"WEB THUMB",
+                    "title":"MOVING POSTER4",
+                    "name": "프로젝트 네임",
+                    "period":"1week",
+                    "tool": "프리미어프로, 애프터이펙트",
+                    "info": "이러한 의도로 이렇게 의도했다요 개망했다요 어떡하다요030",
+                    "per":"20%"
+                }
+            ]
+        },
+        {
+            "catename" : "Work",
+            "list":[
+                {
+                    "imgurl": "web4.png",
+                    "alt":"WEB THUMB",
+                    "title":"MOVING POSTER1",
+                    "name": "프로젝트 네임",
+                    "period":"1week",
+                    "tool": "프리미어프로, 애프터이펙트",
+                    "info": "이러한 의도로 이렇게 의도했다요 개망했다요 어떡하다요030",
+                    "per":"20%"
+                },
+                {
+                    "imgurl": "web3.png",
                     "alt":"WEB THUMB",
                     "title":"MOVING POSTER2",
+                    "name": "프로젝트 네임",
                     "period":"1week",
-                    "afterEffect" : "used",
-                    "premiere" : "used"
+                    "tool": "프리미어프로, 애프터이펙트",
+                    "info": "이러한 의도로 이렇게 의도했다요 개망했다요 어떡하다요030",
+                    "per":"20%"
                 },
                 {
                     "imgurl": "web1.jpg",
                     "alt":"WEB THUMB",
                     "title":"MOVING POSTER3",
+                    "name": "프로젝트 네임",
                     "period":"1week",
-                    "afterEffect" : "used",
-                    "premiere" : "used"
+                    "tool": "프리미어프로, 애프터이펙트",
+                    "info": "이러한 의도로 이렇게 의도했다요 개망했다요 어떡하다요030",
+                    "per":"20%"
                 },
                 {
-                    "imgurl": "design4.jpg",
+                    "imgurl": "web2.jpg",
                     "alt":"WEB THUMB",
                     "title":"MOVING POSTER4",
+                    "name": "프로젝트 네임",
                     "period":"1week",
-                    "afterEffect" : "used",
-                    "premiere" : "used"
+                    "tool": "프리미어프로, 애프터이펙트",
+                    "info": "이러한 의도로 이렇게 의도했다요 개망했다요 어떡하다요030",
+                    "per":"20%"
                 }
             ]
         }
