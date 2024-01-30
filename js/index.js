@@ -36,7 +36,7 @@ window.onload = function(){
     playBtn.addEventListener("click",togglePlay)
     video.addEventListener("click",togglePlay)
     function updateBtn(){
-        let icon = this.paused ? `<i class="fa-solid fa-play fa-2x"></i>` : `<i class="fa-solid fa-pause fa-2x"></i>`
+        let icon = this.paused ? `<i class="fa-solid fa-play fa-2x"></i>` : `<i class="fa-solid fa-pause"></i>`
         playBtn.innerHTML = icon
     }
     video.addEventListener("play", updateBtn)
@@ -47,16 +47,16 @@ window.onload = function(){
     volumeBtn.addEventListener("click", function(){
         if(video.muted){
             video.muted = false
-            volumeBtn.innerHTML = `<i class="fa-solid fa-volume-high fa-2x"></i>`
+            volumeBtn.innerHTML = `<i class="fa-solid fa-volume-high "></i>`
         }else{
             video.muted = true
             volumeBtn.innerHTML = `<i class="fa-solid fa-volume-xmark fa-2x"></i>`
         }
     })
     if(video.muted){
-        volumeBtn.innerHTML = `<i class="fa-solid fa-volume-xmark fa-2x"></i>`
+        volumeBtn.innerHTML = `<i class="fa-solid fa-volume-xmark "></i>`
     }else{
-        volumeBtn.innerHTML = `<i class="fa-solid fa-volume-high fa-2x"></i>`
+        volumeBtn.innerHTML = `<i class="fa-solid fa-volume-high "></i>`
     }
 
     // 스킬 프로그레스
@@ -231,7 +231,7 @@ window.onload = function(){
                 let html = `
                     <li>
                         <div class="imgbox">
-                            <img src="https://img.youtube.com/vi/${obj.videoid}/maxresdefault.jpg" alt="" ${obj.videoid ? "style='display:block'" : "style='display:none'"}>
+                            <img src="https://img.youtube.com/vi/${obj.videoid}/mqdefault.jpg" alt="" ${obj.videoid ? "style='display:block'" : "style='display:none'"}>
                             <img src="../img/${obj.imgurl}" alt="" ${obj.imgurl ? "style='display:block'" : "style='display:none'"}>
                         </div>
                         <div class="txtbox">

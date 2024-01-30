@@ -23,7 +23,7 @@ body::-webkit-scrollbar {
     display: none;
 }
 .inner{
-    max-width: 1400px; padding: 0 20px; width: 100%; 
+    padding: 0 20px; width: 80%; 
     position: relative; margin: 0 auto;
     }
 .info-title {
@@ -33,15 +33,16 @@ body::-webkit-scrollbar {
     color: #F4EFFA;
     opacity: 0.4;
 }
-.in-box {
-    width: 400px; height: 270px;
-    background-color: #C8B1E4;
-    border-radius: 15px;
-    position: absolute;
-}
 span {
     font-family: 'SBAggroM';
     font-size: 1.8rem;
 }
-@media screen and (max-width: 1024px){}
-@media screen and (max-width: 768px){}
+@media screen and (max-width: 1024px){
+    .inner{
+        width: 90%; 
+
+        }
+}
+@media screen and (max-width: 768px){
+
+}

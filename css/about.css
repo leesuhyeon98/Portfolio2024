@@ -9,8 +9,7 @@
 /* 이모지캐릭터 & 인사 */
 .profile .pro-top {}
 .profile .pro-top .my-emoji {
-    width: 600px;
-    height: 800px;
+    width: 60rem;
     margin: 0 auto;
 }
 .profile .pro-top .my-emoji img {
@@ -32,6 +31,12 @@
 
 /* info 기본정보 */
 .profile .pro-top .info {}
+.in-box {
+    width: 400px; height: 270px;
+    background-color: #C8B1E4;
+    border-radius: 15px;
+    position: absolute;
+}
 
 .profile .pro-top .info .basic {
     top: 0px; left: 120px;
@@ -62,7 +67,7 @@
     top: 10px; left: 15px;
 }
 .pro-top .info .education ul {
-    padding: 60px 20px;
+    padding: 60px 20px 0;
     color: #2F184B;
 }
 .pro-top .info .education ul li {
@@ -79,7 +84,7 @@
     top: 10px; left: 15px;
 }
 .pro-top .info .career ul {
-    padding: 60px 20px;
+    padding: 60px 20px 0;
     color: #2F184B;
 }
 .pro-top .info .career ul li {
@@ -95,7 +100,7 @@
     top: 10px; left: 15px;
 }
 .pro-top .info .license ul {
-    padding: 60px 20px;
+    padding: 60px 20px 0;
     color: #2F184B;
 }
 .pro-top .info .license ul li {
@@ -172,4 +177,131 @@
 .skill ul li .blender {
     background: url(../img/blender.png) no-repeat center / 60%;
     border-radius: 100%;
+}
+
+
+/* 반응형 */
+/* 태블릿 */
+@media screen and (max-width: 1024px){
+    /* 프로필&스킬 */
+    .profile {
+        padding-top: 80px;
+    }
+    /* 이모지캐릭터 & 인사 */
+    .profile .pro-top .my-emoji {
+        width: 30rem;
+    }
+    .profile .pro-top .my-emoji img {
+        border-radius: 100%;
+    }
+    .profile .pro-top .my-emoji h1,
+    .profile .pro-top .my-emoji h2 {
+        text-align: center;
+    }
+    .profile .pro-top .my-emoji h1 {
+        font-size: 6rem;
+    }
+    .profile .pro-top .my-emoji h2 {
+        font-size: 2rem;
+        letter-spacing: 4px;
+    }
+    /* 정보 */
+    .profile .pro-top .info {
+        margin-top: 30px;
+        width: 100%;
+        background-color: #C8B1E4;
+        border-radius: 15px;
+    }
+    .in-box {
+        width: 100%; height: 100%;
+        background-color: #C8B1E4;
+        border-radius: 15px;
+        position: relative;
+    }
+
+    .profile .pro-top .info .basic {
+        top: 0; left: 0;
+    }
+    .profile .pro-top .info .basic > .info-title {
+        top: 5px; left: 15px;
+    }
+    .pro-top .info .basic ul {
+        display: flex; justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .pro-top .info .basic ul li {
+        width: calc(100%/2);
+        text-align: center;
+    }
+    /* 교육사항 */
+    .pro-top .info .education {
+        top: 0; left: 0; width: 100%; height: 100%;
+    }
+    .profile .pro-top .info .education > .info-title {
+        top: 5px; left: 15px;
+    }
+    .pro-top .info .education ul {
+        display: flex; justify-content: space-between;
+        flex-wrap: wrap; gap: 2%;
+    }
+    .pro-top .info .education ul li {
+        width: calc(98%/2);
+        text-align: left;
+        font-size: 1.8rem;
+    }
+
+    /* 커리어 경력 */
+    .pro-top .info .career {
+        top: 0; left: 0; width: 100%; height: 100%;
+    }
+    .pro-top .info .career > .info-title {
+        top: 5px; left: 15px;
+    }
+    .pro-top .info .career ul {
+        display: flex; justify-content: space-between;
+        flex-wrap: wrap; gap: 2%;
+    }
+    .pro-top .info .career ul li {
+        width: calc(98%/2);
+        text-align: left;
+    }
+    /* 라이센스 자격증 */
+    .pro-top .info .license {
+        top: 0; left: 0; width: 100%; height: 100%;
+    }
+    .pro-top .info .license > .info-title {
+        top: 5px; left: 15px;
+    }
+    .pro-top .info .license ul {
+        padding-bottom: 10px;
+        display: flex; justify-content: space-between;
+        flex-wrap: wrap; gap: 2%;
+    }
+    .pro-top .info .license ul li {
+        width: calc(90%/2);
+        line-height: 2rem;
+    }
+    .pro-top .info .license ul li span {
+        padding-right: 20px;
+    }
+}
+
+/* 모바일 */
+@media screen and (max-width: 768px){
+    /* 정보 */
+    .pro-top .info .basic ul li {
+        width: 100%;
+    }
+    /* 교육사항 */
+    .pro-top .info .education ul li {
+        width: 100%;
+    }
+    /* 라이센스 */
+    .pro-top .info .license ul li {
+        width: 100%;
+    }
+    /* 스킬크기 */
+    .skill ul li {
+        width: 16%;
+    }
 }

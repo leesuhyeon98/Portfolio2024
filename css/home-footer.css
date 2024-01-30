@@ -21,7 +21,7 @@ body {
     height: 100%;
 }
 .header .inner .logo {
-    height: 6rem;
+    height: 6rem; width: 100%;
 }
 .header .inner .logo a {
     height: 100%;
@@ -60,7 +60,7 @@ body {
     overflow: hidden;
     transition: 0.3s;
     color: #532B88;
-    background-color: #f4effa94;
+    background-color: #f4effa94; 
 }
 .header-manu ul li .sub-manu li {
     font-size: 1.5rem;
@@ -92,12 +92,15 @@ body {
 
 /* 영상 컨트롤러 */
 .visual .video-controls {
-    position: absolute; left: 50%; bottom: 3%; width: 100%;
-    max-width: 1650px;
+    position: absolute; left: 50%; bottom: 3%; width: 80%;
+    max-width: 90%;
     transform: translate(-50%);
     display: flex; gap: 2%; align-items: center;
     
 }
+.visual .video-controls i { font-size: 2.5rem; color: #9B72CF;}
+.visual .video-controls i:hover { color: #C8B1E4;}
+
 .visual .video-controls .pro-bar {
     width: 100%; height: 6px;
     background-color: rgb(244, 240, 250,0.5);
@@ -106,9 +109,67 @@ body {
     height: 100%; background-color: #9B72CF;
 }
 
+/* 홈 태블릿 반응형 */
+@media screen and (max-width: 1024px){
+    /* 홈 인트로 */
+    .visual {
+        position: relative;
+        width: 100%; height: 100%;
+        text-align: center;
+    }
+    .visual video {
+        width: 100%; max-width: 1024px; height: 100%;
+    }
+    /* 영상 컨트롤러 */
+    .visual .video-controls {
+        position: absolute; left: 50%; bottom: 3%; width: 90%;
+        transform: translate(-50%);
+        display: flex; gap: 2%; align-items: center;
+    }
+    .visual .video-controls i { font-size: 2rem; }
+    .visual .video-controls .pro-bar {
+        width: 100%; height: 4px;
+    }
+    /* 헤더 메뉴 */
+    .header {
+        width: 100%; height: 5rem;
+    }
+    
+    .header .inner .logo {
+        height: 4rem; width: 100%;
+    }
+}
+
+/* 홈 모바일 반응형 */
+@media screen and (max-width: 768px){
+    /* 홈 인트로 */
+    .visual {
+        position: relative;
+        width: 100%; height: 100%;
+        text-align: center;
+    }
+    .visual video {
+        width: 100%; max-width: 1024px; height: 100%;
+    }
+    /* 영상 컨트롤러 */
+    .visual .video-controls {
+        position: absolute; left: 50%; bottom: 3%; width: 90%;
+        transform: translate(-50%);
+        display: flex; gap: 2%; align-items: center;
+    }
+    .visual .video-controls i { font-size: 2rem; }
+    .visual .video-controls .pro-bar {
+        width: 100%; height: 3px;
+    }
+    /* 헤더 메뉴 */
+    .header .header-manu {
+        /* display: none; */
+    }
+}
+
 /* 푸터 */
 .footer {
-    margin-top: 80px;
+    margin-top: 6rem;
     width: 100%;
     background-color: #2F184B;
 }
@@ -132,4 +193,20 @@ body {
     text-align: center;
     font-family: 'GmarketSansLight';
     letter-spacing: 4px;
+}
+
+/* 푸터 반응형 */
+@media screen and (max-width: 1024px){
+    .footer p {
+        padding: 50px 0px;
+        letter-spacing: 3px;
+        font-size: 1.6rem;
+    }
+}
+@media screen and (max-width: 768px){
+    .footer p {
+        padding: 50px 0px;
+        letter-spacing: 2px;
+        font-size: 1.4rem;
+    }
 }

@@ -65,7 +65,7 @@
                 },
                 {
                     "imgurl": "phonecase2.jpg",
-                    "alt":"WEB THUMB",
+                    "alt":"Project THUMB",
                     "title":"Phone Case",
                     "name": "박효신 일러스트 폰케이스",
                     "period":"2days",
@@ -75,7 +75,7 @@
                 },
                 {
                     "imgurl": "phonecase3.jpg",
-                    "alt":"WEB THUMB",
+                    "alt":"Project THUMB",
                     "title":"Phone Case",
                     "name": "캐릭터 폰케이스 -토마토 패턴-",
                     "period":"2days",
@@ -85,7 +85,7 @@
                 },
                 {
                     "imgurl": "phonecase4.jpg",
-                    "alt":"WEB THUMB",
+                    "alt":"Project THUMB",
                     "title":"Phone Case",
                     "name": "캐릭터 폰케이스 -아보카도 패턴-",
                     "period":"1days",
@@ -95,12 +95,12 @@
                 },
                 {
                     "imgurl": "teacoster1.jpg",
-                    "alt":"WEB THUMB",
+                    "alt":"Project THUMB",
                     "title":"Goods Design",
                     "name": "유큐리바 코스터",
                     "period":"4days",
                     "tool": "일러스트",
-                    "info": "일본 도쿄에 있는 오키나와 스타일 바의 캐릭터를 제작하고 그 캐릭터를 이용해 티코스터를 제작 기획했습니다.<br>오키나와 스타일 바여서 오키나와 풍속의 한 형태인 액막이 토기 사자를 이용해 캐릭터를 제작했으며, 해당 바의 특성상 잔의 받침으로 제작을 기획했다.<br>대부분의 메뉴가 차가운 음료여서 잔의 이슬 맺힘을 고려하여 물을 흡수할수있는 코르크 재질의 코스터로 제작했습니다",
+                    "info": "일본 도쿄에 있는 오키나와 스타일 바의 캐릭터를 제작하고 그 캐릭터를 이용해 티코스터를 제작 기획했습니다.<br>오키나와 스타일 바여서 오키나와 풍속의 한 형태인 액막이 토기 사자를 이용해 캐릭터를 제작했으며, 해당 바의 특성상 잔의 받침으로 제작을 기획했으며<br>대부분의 메뉴가 차가운 음료여서 잔의 이슬 맺힘을 고려하여 물을 흡수 할 수 있는 코르크 재질의 코스터로 제작했습니다",
                     "per":"100%"
                 }
             ]
@@ -110,7 +110,7 @@
             "list":[
                 {
                     "imgurl": "card1.jpg",
-                    "alt":"WEB THUMB",
+                    "alt":"Graphic THUMB",
                     "title":"Business card",
                     "name": "평리 식육점 명함",
                     "period":"3days",
@@ -120,7 +120,7 @@
                 },
                 {
                     "imgurl": "card2.jpg",
-                    "alt":"WEB THUMB",
+                    "alt":"Graphic THUMB",
                     "title":"Business card",
                     "name": "Korean style 명함",
                     "period":"1week",
@@ -130,7 +130,7 @@
                 },
                 {
                     "imgurl": "character-Lanny.jpg",
-                    "alt":"WEB THUMB",
+                    "alt":"Graphic THUMB",
                     "title":"Character-Lanny",
                     "name": "토끼 캐릭터 래니",
                     "period":"3days",
@@ -140,23 +140,23 @@
                 },
                 {
                     "imgurl": "graphic1.png",
-                    "alt":"WEB THUMB",
+                    "alt":"Graphic THUMB",
                     "title":"Topper+Card",
                     "name": "어버이날 용돈카드 토퍼 -Ver.Mom-",
                     "period":"2days",
                     "tool": "프리미어프로, 애프터이펙트",
-                    "info": "이러한 의도로 이렇게 의도했다요 개망했다요 어떡하다요030",
-                    "per":"20%"
+                    "info": "어버이날 이벤트를 위해 제작되었으며<br>그냥 드리기 밋밋한 용돈봉투에서 포인트있는 디자인으로 기획하고 상단에는 어버이날 공통 문구를 배치하고, 하단에는 어머니 전용 문구를 삽입했습니다",
+                    "per":"100%"
                 },
                 {
                     "imgurl": "graphic2.png",
-                    "alt":"WEB THUMB",
+                    "alt":"Graphic THUMB",
                     "title":"Topper+Card",
                     "name": "어버이날 용돈카드 토퍼 -Ver.Dad-",
                     "period":"2days",
                     "tool": "프리미어프로, 애프터이펙트",
-                    "info": "이러한 의도로 이렇게 의도했다요 개망했다요 어떡하다요030",
-                    "per":"20%"
+                    "info": "어버이날 이벤트를 위해 제작되었으며<br>그냥 드리기 밋밋한 용돈봉투에서 포인트있는 디자인으로 기획하고 상단에는 어버이날 공통 문구를 배치하고, 하단에는 아버지 전용 문구를 삽입했습니다",
+                    "per":"100%"
                 },
                 {
                     "imgurl": "teacoster.png",
@@ -174,28 +174,28 @@
             "catename" : "Work",
             "list":[
                 {
-                    "imgurl": "web4.png",
-                    "alt":"WEB THUMB",
-                    "title":"MOVING POSTER1",
-                    "name": "프로젝트 네임",
-                    "period":"1week",
-                    "tool": "프리미어프로, 애프터이펙트",
-                    "info": "이러한 의도로 이렇게 의도했다요 개망했다요 어떡하다요030",
-                    "per":"20%"
+                    "imgurl": "character-Maro.png",
+                    "alt":"Work THUMB",
+                    "title":"Character-Lanny",
+                    "name": "핫티몰 캐릭터 마로",
+                    "period":"2week",
+                    "tool": "일러스트",
+                    "info": "입사 전부터 기획 제작한 고질라 모티브 캐릭터<br>전체적으로 동글동글하고 직선없이 곡선으로 부드럽고 장난기 있는 이미지이며, 고질라를 모티브로 숲속에 숨어지내며 밤에만 활동해 별을 좋아한다.<br>야영객이 남기고 간 마시멜로를 먹은 뒤 해가 뜨기전까지 남겨진 마시멜로를 찾으로 돌아다닌다",
+                    "per":"100%"
                 },
                 {
-                    "imgurl": "web3.png",
-                    "alt":"WEB THUMB",
-                    "title":"MOVING POSTER2",
-                    "name": "프로젝트 네임",
-                    "period":"1week",
-                    "tool": "프리미어프로, 애프터이펙트",
-                    "info": "이러한 의도로 이렇게 의도했다요 개망했다요 어떡하다요030",
-                    "per":"20%"
+                    "imgurl": "phonecase9.jpg",
+                    "alt":"Work THUMB",
+                    "title":"PHONE CASE",
+                    "name": "풀숲 속 공룡",
+                    "period":"1days",
+                    "tool": "일러스트",
+                    "info": "직접 제작한 캐릭터 마로를 사용해 투명 케이스를 제작했으며,<br>장난기 많은 캐릭터 이미지와 곧 다가오는 봄의 싱그러움을 살리기 위해 디자인 기획했습니다",
+                    "per":"100%"
                 },
                 {
                     "imgurl": "web1.jpg",
-                    "alt":"WEB THUMB",
+                    "alt":"Work THUMB",
                     "title":"MOVING POSTER3",
                     "name": "프로젝트 네임",
                     "period":"1week",
@@ -205,7 +205,7 @@
                 },
                 {
                     "imgurl": "web2.jpg",
-                    "alt":"WEB THUMB",
+                    "alt":"Work THUMB",
                     "title":"MOVING POSTER4",
                     "name": "프로젝트 네임",
                     "period":"1week",
