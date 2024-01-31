@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style media data-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></style>
     <!-- <script src="js/prefixfree.min.js"></script> -->
-    <link rel="stylesheet" href="CSS/sub-common.css">
+    <link rel="stylesheet" href="css/sub-common.css">
     <style>
         body::-webkit-scrollbar {
             display: none;
@@ -325,8 +325,8 @@
                     let obj = workData2.work[_idx].list[index];
                     modal1.classList.add("active")
                     modalCont.innerHTML = `
-                        <div class="view-img" ${obj.imgurl}>
-                            <img src="img/${obj.imgurl}" alt="">
+                        <div class="view-img">
+                            <img src="../img/${obj.imgurl}" alt="${obj.alt}">
                             <div class="info" "style='top:0'">
                                 <h1>${obj.title}</h1>
                                 <h2>${obj.name}</h2>
