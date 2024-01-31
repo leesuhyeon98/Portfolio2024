@@ -138,6 +138,10 @@ body {
     .header .inner .logo {
         height: 4rem; width: 100%;
     }
+    /* 포폴 서브메뉴 네비 */
+    .header-manu ul li .sub-manu {
+        top: 3.5rem;
+    }
 }
 
 /* 홈 모바일 반응형 */
@@ -164,6 +168,10 @@ body {
     /* 헤더 메뉴 */
     .header .header-manu {
         /* display: none; */
+    }
+    /* 포폴 서브메뉴 네비 */
+    .header-manu ul li .sub-manu {
+        top: 3.5rem;
     }
 }
 

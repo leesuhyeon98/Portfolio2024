@@ -8,6 +8,7 @@ window.onload = function(){
             header.classList.remove("active")
         }
     })
+    
     // 홈 영상
     let video = document.querySelector("video")
     // 프로그레스 바
@@ -180,6 +181,7 @@ window.onload = function(){
     // 서브 포폴 탭
         let modal1 = document.querySelector(".modal2")
         let modalCont = document.querySelector(".modal-cont2")
+        
 
         let workData2;
         const workXttp = new XMLHttpRequest();
@@ -199,7 +201,7 @@ window.onload = function(){
             let tabHtml = ``;
             let dataArr = _data.work;
             for(let i = 0; i < dataArr.length; i++){
-                let html = `<li><a href="#">${dataArr[i].catename}</a></li>`;
+                let html = `<li id="${dataArr[i].id}"><a href="#">${dataArr[i].catename}</a></li>`;
                 tabHtml += html;
             }
             workCate.innerHTML = tabHtml;
@@ -220,8 +222,9 @@ window.onload = function(){
                 
             }
             workSlide(0)
-            
+
         }
+
         let workSwiper;
         function workSlide(_idx){
             let swworkHtml = ``;
@@ -261,7 +264,7 @@ window.onload = function(){
                     },
                 }
             })
-
+            
             // 썸네일 클릭 > 모달 오픈
             
             let workItem = document.querySelectorAll(".slide-wrap3 ul li")
