@@ -235,7 +235,7 @@ window.onload = function(){
                     <li>
                         <div class="imgbox">
                             <img src="https://img.youtube.com/vi/${obj.videoid}/mqdefault.jpg" alt="" ${obj.videoid ? "style='display:block'" : "style='display:none'"}>
-                            <img src="../img/${obj.imgurl}" alt="" ${obj.imgurl ? "style='display:block'" : "style='display:none'"}>
+                            <img src="img/${obj.imgurl}" alt="" ${obj.imgurl ? "style='display:block'" : "style='display:none'"}>
                         </div>
                         <div class="txtbox">
                             <p class="title">${obj.title}</p>
@@ -274,7 +274,7 @@ window.onload = function(){
                     modal1.classList.add("active")
                     modalCont.innerHTML = `
                         <div class="view-img" ${obj.imgurl ? "style='display:block'" : "style='display:none'"}>
-                            <img src="../img/${obj.imgurl}" alt="">
+                            <img src="img/${obj.imgurl}" alt="">
                         </div>
                         <div class="view-player" ${obj.videoid ? "style='display:block'" : "style='display:none'"}>
                             <iframe src="https://www.youtube.com/embed/${obj.videoid}" allowfullscreen></iframe>
