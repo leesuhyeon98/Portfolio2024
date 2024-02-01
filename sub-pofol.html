@@ -66,11 +66,11 @@
             position: relative; margin-bottom: 20px; height: auto;
         }
         .slide-wrap3 ul {
-            display: flex; flex-wrap: wrap; gap: 5%;
+            display: flex; flex-wrap: wrap; gap: 2%;
         }
         .slide-wrap3 ul li{
             height: auto; font-size: 1.5rem; 
-            width: calc(90%/3); margin-bottom: 1.5rem;
+            width: calc(96%/3); margin-bottom: 1.5rem;
         }
         .slide-wrap3 ul li:hover {
             cursor: pointer;
@@ -79,7 +79,8 @@
             position: relative; width: 100%; padding-bottom: 60%;
         }
         .slide-wrap3 ul li .imgbox img{
-            width: 100%; height: 100%; position: absolute; top: 0; left: 0;  object-fit: cover;
+            width: 100%; height: 100%; position: absolute; top: 0; left: 0;  object-fit: cover; object-position: top;
+            border-radius: 15px;
         }
         .work2 .slide-wrap3 ul li .txtbox{
             text-align: center; margin-top: 1rem; color: #9B72CF;
@@ -290,7 +291,7 @@
                             <img src="img/${obj.imgurl}" alt="" ${obj.imgurl ? "style='display:block'" : "style='display:none'"}>
                         </div>
                         <div class="txtbox">
-                            <p class="title">${obj.title}</p>
+                            <p class="title">${obj.name}</p>
                             <p class="writer" 
                                 ${obj.period ? "style='display:block'" : "style='display:none'"}>
                                 ${obj.period}

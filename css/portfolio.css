@@ -4,7 +4,7 @@
 }
 .portfolio .title {
     /* margin: 120px 0px 0px; */
-    padding-top: 80px;
+    padding-top: 120px;
     font-size: 8rem;
     text-align: center;
     letter-spacing: 2rem;
@@ -13,13 +13,16 @@
 
 
 .work { 
-    padding: 5rem 0; 
+    padding: 6rem 0; 
 }
-.work ul { display: flex; gap: 30px 5%; flex-wrap: wrap; }
-.work ul li { width: calc(90%/3); cursor: pointer; position: relative; }
+.work ul { display: flex; gap: 20px; flex-wrap: wrap; }
+.work ul li { 
+    width: calc(( 100% - 40px ) / 3 ); cursor: pointer; position: relative; 
+    font-size: 0;
+}
 .work ul li:nth-child(n+7) {display: none;}
 .work ul li .thumb-img { width: 100%; }
-.work ul li .thumb-img img { width: 100%; }
+.work ul li .thumb-img img { width: 100%; border-radius: 15px;}
 .work ul li .view-cont { display: none; }
 
 .modal { width: 100%; height: 100%; position: fixed; 
@@ -72,7 +75,7 @@
 }
 .slide-wrap3 ul li{
     height: auto; font-size: 1.5rem; 
-    width: calc(96%/3); margin-bottom: 1.5rem;
+    width: calc(96%/3); margin-bottom: 1.5rem; 
 }
 .slide-wrap3 ul li:hover {
     cursor: pointer;
@@ -82,7 +85,8 @@
     position: relative; width: 100%; padding-bottom: 60%;
 }
 .slide-wrap3 ul li .imgbox img{
-    width: 100%; height: 100%; position: absolute; top: 0; left: 0;  object-fit: cover;
+    width: 100%; height: 100%; position: absolute; top: 0; left: 0;  object-fit: cover; object-position: top;
+    border-radius: 15px;
 }
 .work2 .slide-wrap3 ul li .txtbox{
     text-align: center; margin-top: 1rem; color: #9B72CF;
@@ -122,8 +126,8 @@
 .viewmore:hover {
     background-color: #C8B1E4;
     color: #532B88;
-
 }
+.viewmore a { display: block; }
 
 /* 반응형 */
 /* 태블릿 */
@@ -150,20 +154,29 @@
     }
     .portfolio .title {
         padding-top: 3rem;
-        font-size: 7rem;
+        font-size: 4rem;
         /* text-align: center; */
         /* letter-spacing: 1rem; */
     }
     /* 영상 썸 간격 */
-    .work ul { display: flex; gap: 4px 2%; flex-wrap: wrap; }
-    .work ul li { width: calc(96%/2); }
+    .work ul { display: flex; gap: 10px; flex-wrap: wrap; }
+    .work ul li { width: calc((100% - 20px) / 2); }
+    /* 모달 사이드 설명 */
+    .view-cont { display: block; }
+    .view-cont .player { width: 100%; }
+    .view-cont .info { width: 100%; }
     /* 서브 탭 */
     .tab-list2{
         display: flex; justify-content: center; gap: 5px; margin-bottom: 40px; flex-wrap: wrap;
     }
     .tab-list2 li a{
         padding: 0 20px; display: flex; align-items: center; height: 45px;
-        font-size: 3rem; font-family: 'SBAggroM'; color: #C8B1E4;
+        font-size: 2rem; font-family: 'SBAggroM'; color: #C8B1E4;
+    }
+    /* 서브 탭 메뉴 */
+    .tab-list2 li a{
+        padding: 0 5px; display: flex; align-items: center; height: 45px;
+        font-size: 2rem; font-family: 'SBAggroM'; color: #C8B1E4;
     }
     /* 서브 뷰 영역 */
     .slide-wrap3 ul {

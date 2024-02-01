@@ -21,7 +21,7 @@ body {
     height: 100%;
 }
 .header .inner .logo {
-    height: 6rem; width: 100%;
+    height: 5rem; width: 100%;
 }
 .header .inner .logo a {
     height: 100%;
@@ -79,15 +79,91 @@ body {
 .header-manu ul li:hover .sub-manu {
     height: 20rem;
 }
+/* 사이드 메뉴 */
+/* 모바일 메뉴 버튼 */
+.mo-manu-btn {
+    cursor: pointer;
+    z-index: 11;
+    display: none;
+}
+.mo-manu-btn .bar {
+    width: 35px;
+    height: 3px;
+    background-color: #9B72CF;
+    position: relative;
+}
+.mo-manu-btn .bar:nth-child(2) {
+    margin: 8px 0;
+}
+.mo-manu-btn.active .bar:nth-child(1) {
+    transform: rotate(45deg);
+    top: 3px;
+}
+.mo-manu-btn.active .bar:nth-child(2) {
+    display: none;
+}
+.mo-manu-btn.active .bar:nth-child(3) {
+    transform: rotate(-45deg);
+}
+.side-manu {
+    position: fixed;
+    width: 100%; max-width: 400px;
+    top: 0; right: -100%;
+    height: 100vh;
+    background-color: #C8B1E4;
+    padding: 60px 0;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.side-manu ul li {
+    position: relative;
+}
+.side-manu ul li:hover {
+    color: #F4EFFA; background-color: #9B72CF;
+}
+.side-manu ul li a {
+    display: flex;
+    padding: 30px;
+    gap: 20px;
+    align-items: center;
+}
+.side-manu.active {
+    right: 0;
+}
+/* .side-manu ul li .sub-manu2 {
+    position: absolute; top: 4.5rem; width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    color: #532B88;
+    background-color: #f4effa94; 
+}
+.side-manu ul li .sub-manu2 li {
+    font-size: 1.5rem;
+    height: 5rem;
+    line-height: 5rem;
+}
+.side-manu ul li .sub-manu2 li:hover {
+    color: #F4EFFA;
+    transition: 0.3s;
+    background-color: #9B72CF;
+}
+.side-manu ul li .sub-manu2 li a {
+    display: block;
+    text-align: center;
+}
+.side-manu ul li:hover .sub-manu2 {
+    height: 20rem;
+} */
 
 /* 홈 인트로 */
 .visual {
     position: relative;
     width: 100%; height: 100vh;
-    text-align: center;
+    text-align: center; overflow: hidden;
 }
 .visual video {
-    height: 100%;
+    height: 100%; width: 100%; object-fit: cover;
 }
 
 /* 영상 컨트롤러 */
@@ -115,10 +191,11 @@ body {
     .visual {
         position: relative;
         width: 100%; height: 100%;
-        text-align: center;
+        text-align: center; overflow: hidden;
     }
     .visual video {
-        width: 100%; max-width: 1024px; height: 100%;
+        width: 100%; height: 100%;
+        object-fit: cover;
     }
     /* 영상 컨트롤러 */
     .visual .video-controls {
@@ -146,14 +223,21 @@ body {
 
 /* 홈 모바일 반응형 */
 @media screen and (max-width: 768px){
+    /* 모바일 네비 */
+    .header-manu {
+        display: none;
+    }
+    .mo-manu-btn {
+        display: block;
+    }
     /* 홈 인트로 */
     .visual {
         position: relative;
         width: 100%; height: 100%;
-        text-align: center;
+        text-align: center; overflow: hidden;
     }
     .visual video {
-        width: 100%; max-width: 1024px; height: 100%;
+        width: 100%; height: 100%; object-fit: cover;
     }
     /* 영상 컨트롤러 */
     .visual .video-controls {

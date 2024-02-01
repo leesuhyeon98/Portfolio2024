@@ -8,7 +8,21 @@ window.onload = function(){
             header.classList.remove("active")
         }
     })
-    
+    // 모바일 반응형 서브메뉴
+    // 모바일 메뉴버튼
+    let moManuBtn =document.querySelector(".mo-manu-btn")
+    let sideManu =document.querySelector(".side-manu")
+    moManuBtn.addEventListener("click",function(){
+        sideManu.classList.toggle("active")
+        this.classList.toggle("active")
+    })
+    window.addEventListener("resize",function(){
+        let winWidth = window.innerWidth
+        if(winWidth > 768){
+            sideManu.classList.remove("active")
+            moManuBtn.classList.remove("active")
+        }
+    })
     // 홈 영상
     let video = document.querySelector("video")
     // 프로그레스 바
