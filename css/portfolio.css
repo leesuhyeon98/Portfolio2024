@@ -145,6 +145,10 @@
     /* 영상 썸 간격 */
     .work ul { display: flex; gap: 10px 2%; flex-wrap: wrap; }
     .work ul li { width: calc(96%/3); }
+    /* 모달 사이드 설명 */
+    .view-cont { display: block; }
+    .view-cont .player { width: 100%; }
+    .view-cont .info { width: 100%; }
 }
 /* 모바일 */
 @media screen and (max-width: 768px){
@@ -161,10 +165,7 @@
     /* 영상 썸 간격 */
     .work ul { display: flex; gap: 10px; flex-wrap: wrap; }
     .work ul li { width: calc((100% - 20px) / 2); }
-    /* 모달 사이드 설명 */
-    .view-cont { display: block; }
-    .view-cont .player { width: 100%; }
-    .view-cont .info { width: 100%; }
+    
     /* 서브 탭 */
     .tab-list2{
         display: flex; justify-content: center; gap: 5px; margin-bottom: 40px; flex-wrap: wrap;
