@@ -164,6 +164,8 @@ window.onload = function(){
                 <li>
                     <div class="thumb-img">
                         <img src="https://img.youtube.com/vi/${obj.videoid}/mqdefault.jpg" alt="썸네일 이미지">
+                        <p>${obj.name}</p>
+                        <p>작업기간 : ${obj.period}</p>
                     </div>
                     <div class="view-cont">
                         <div class="player">

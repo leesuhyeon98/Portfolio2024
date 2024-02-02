@@ -17,7 +17,18 @@
 .work ul { display: flex; gap: 20px; flex-wrap: wrap; }
 .work ul li { 
     width: calc(( 100% - 40px ) / 3 ); cursor: pointer; position: relative; 
-    font-size: 0;
+    padding-bottom: 1.5rem;
+}
+.work ul li p {
+    font-family: 'SBAggroM'; font-size: 2.2rem; text-align: center;
+    color: #2F184B;
+}
+.work ul li p:last-child {
+    font-size: 1.8rem; font-family: 'GmarketSansMedium';
+}
+.work ul li:hover p {
+    color: #9B72CF;
+    transition: 0.3s;
 }
 .work ul li:nth-child(n+7) {display: none;}
 .work ul li .thumb-img { width: 100%; }
@@ -56,10 +67,10 @@
     /* padding: 5rem 0;  */
 }
 .tab-list2{
-    display: flex; justify-content: center; gap: 5px; margin-bottom: 60px; flex-wrap: wrap;
+    display: flex; justify-content: center; gap: 5px; padding-bottom: 60px; flex-wrap: wrap;
 }
 .tab-list2 li a{
-    padding: 0 20px; display: flex; align-items: center; height: 45px;
+    padding: 0 20px; display: flex; align-items: center;
     font-size: 3.5rem; font-family: 'SBAggroM'; color: #C8B1E4;
 }
 .tab-list2 li.active a{
@@ -160,6 +171,12 @@
     .work { padding-top: 30px; }
     .work ul li { width: 95%; margin: 10px auto; }
     .work ul li:nth-child(n+4) {display: none;}
+    .work ul li p {
+        font-size: 18px;
+    }
+    .work ul li p:last-child {
+        font-size: 16px;
+    }
 
     /* 영상 뷰모어 */
     .viewmore1 {
@@ -168,15 +185,15 @@
     
     /* 서브 탭 */
     .tab-list2{
-        display: flex; justify-content: center; gap: 5px; margin-bottom: 40px; flex-wrap: wrap;
+        display: flex; justify-content: center; gap: 5px; padding-bottom: 20px; flex-wrap: wrap;
     }
     /* 서브 탭 메뉴 */
     .tab-list2 li a{
-        font-size: 25px; font-family: 'SBAggroM';
+        font-size: 22px; font-family: 'SBAggroM'; padding: 0 5px;
     }
     /* 서브 뷰 영역 */
     .slide-wrap3 ul li{
-        height: auto; font-size: 1.5rem; 
+        height: auto; font-size: 15px; 
         width: 95%; margin: 0 auto;
     }
     .slide-wrap3 ul li:nth-child(n+2) { display: none; }
