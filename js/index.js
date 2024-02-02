@@ -264,7 +264,7 @@ window.onload = function(){
                             <p class="title">${obj.title}</p>
                             <p class="writer" 
                                 ${obj.period ? "style='display:block'" : "style='display:none'"}>
-                                ${obj.period}
+                                작업기간 : ${obj.period}
                             </p>
                         </div>
                     </li>

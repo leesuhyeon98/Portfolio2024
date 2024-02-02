@@ -52,7 +52,7 @@
             display: flex; justify-content: center; gap: 5px; margin-bottom: 40px; flex-wrap: wrap;
         }
         .tab-list2 li a{
-            padding: 0 20px; display: flex; align-items: center; height: 45px; border-radius: 30px; font-size: 2rem;
+            padding: 0 20px; display: flex; align-items: center; height: 45px; border-radius: 30px; font-size: 2.6rem;
             color: #9B72CF;
         }
         .tab-list2 li a:hover { 
@@ -63,7 +63,7 @@
         }
         /* 슬라이드영역 */
         .slide-wrap3{
-            position: relative; margin-bottom: 20px; height: auto;
+            position: relative; margin-bottom: 20px;
         }
         .slide-wrap3 ul {
             display: flex; flex-wrap: wrap; gap: 2%;
@@ -131,6 +131,9 @@
             font-size: 3.5rem;
             margin-bottom: 3rem;
             }
+            .tab-list2 li a {
+                font-size: 22px;
+            }
             /* 이미지 리스트 간격 */
             .slide-wrap3 ul {
                 gap: 2%;
@@ -171,14 +174,32 @@
             font-size: 2.5rem;
             margin-bottom: 2rem;
             }
+            .tab-list2 {
+                gap: 0px;
+            }
+            .tab-list2 li a {
+                font-size: 18px;
+            }
             /* 이미지 리스트 간격 */
-            .slide-wrap3 ul {
-                gap: 15px 3%;
-            }
+            /* .slide-wrap3 ul {
+                gap: 5px;
+            } */
             .slide-wrap3 ul li{
-                width: calc(97%/2);
+                width: calc((100% - 10px) /2);
             }
-        }
+            .work2 .slide-wrap3 ul li .txtbox p.title{
+                font-family: 'SBAggroM'; font-size: 18px; color: #2F184B;
+            }
+            /* 모달 텍스트 */
+            .modal2 .view-img .info h1 { font-size: 18px; margin-bottom: 10px; 
+            }
+            .modal2 .view-img .info h2 { font-size: 25px; 
+                margin-bottom: 10px; 
+            }
+            .modal2 .view-img .info h3 { font-size: 16px; }
+            .modal2 .view-img .info p { font-size: 16px; }
+            .modal2 .view-img .info p:last-child { font-size: 13px; }
+            }
     </style>
 </head>
 <body>
@@ -294,7 +315,7 @@
                             <p class="title">${obj.name}</p>
                             <p class="writer" 
                                 ${obj.period ? "style='display:block'" : "style='display:none'"}>
-                                ${obj.period}
+                                작업기간 : ${obj.period}
                             </p>
                         </div>
                     </li>

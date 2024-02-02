@@ -185,7 +185,7 @@
 @media screen and (max-width: 1024px){
     /* 프로필&스킬 */
     .profile {
-        padding-top: 80px;
+        padding: 80px 0 50px;
     }
     /* 이모지캐릭터 & 인사 */
     .profile .pro-top .my-emoji {
