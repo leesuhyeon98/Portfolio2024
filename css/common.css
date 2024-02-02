@@ -23,7 +23,7 @@ body::-webkit-scrollbar {
     display: none;
 }
 .inner{
-    padding: 0 20px; width: 80%; 
+    padding: 0 20px;
     position: relative; margin: 0 auto;
     }
 .info-title {
@@ -38,11 +38,11 @@ span {
     font-size: 1.8rem;
 }
 @media screen and (max-width: 1024px){
-    .inner{
-        width: 90%; 
 
-        }
 }
 @media screen and (max-width: 768px){
-
+    span {
+        font-family: 'SBAggroM';
+        font-size: 16px;
+    }
 }

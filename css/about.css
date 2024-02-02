@@ -2,7 +2,6 @@
 /* 프로필&스킬 */
 .profile {
     width: 100%;
-    padding-top: 160px;
     position: relative;
 }
 
@@ -56,7 +55,7 @@
 .pro-top .info .basic ul li span {
     text-align-last: justify; display: block;
     width: 110px;
-    margin-right: 15px;
+    margin-right: 5px;
 }
 /* 교육사항 */
 .pro-top .info .education {
@@ -72,7 +71,7 @@
 }
 .pro-top .info .education ul li {
     font-size: 17px;
-    margin-bottom: 15px;
+    padding-bottom: 15px;
     letter-spacing: -0.8px;
 }
 /* 커리어 경력 */
@@ -89,7 +88,7 @@
 }
 .pro-top .info .career ul li {
     font-size: 16px;
-    margin-bottom: 10px;
+    padding-bottom: 15px;
 }
 /* 라이센스 자격증 */
 .pro-top .info .license {
@@ -105,7 +104,7 @@
 }
 .pro-top .info .license ul li {
     font-size: 17px;
-    margin-bottom: 10px;
+    padding-bottom: 15px;
     letter-spacing: -0.8px;
 }
 .pro-top .info .license ul li span {
@@ -119,11 +118,11 @@
 .skill ul {
     width: 100%; max-width: 1250px;
     display: flex;
-    margin: 60px auto;
+    margin: 0 auto;
     justify-content: space-around;
 }
 .skill ul:first-child {
-    margin-bottom: 7rem;
+    padding: 5rem 0;
 }
 .skill ul li {
     width: 10%; position: relative;
@@ -293,16 +292,68 @@
     .pro-top .info .basic ul li {
         width: 100%;
     }
+    .profile .pro-top .info .basic > .info-title {
+        font-size: 35px; left: 10px;
+    }
+    .pro-top .info .basic ul {
+        font-size: 16px;
+        line-height: 35px;
+        padding: 35px 15px 0;
+        color: #2F184B;
+    }
+    .pro-top .info .basic ul li span {
+        width: 95px;
+    }
     /* 교육사항 */
     .pro-top .info .education ul li {
-        width: 100%;
+        width: 100%; padding-bottom: 8px;
+    }
+    .profile .pro-top .info .education > .info-title {
+        font-size: 35px; left: 10px; top: 0;
+    }
+    .pro-top .info .education ul {
+        font-size: 16px;
+        line-height: 25px;
+        padding: 35px 15px 0;
+        color: #2F184B;
+    }
+    .pro-top .info .education ul li span {
+        width: 95px;
+    }
+    /* 커리어 */
+    .pro-top .info .career ul li {
+        width: 100%; padding-bottom: 8px;
+    }
+    .profile .pro-top .info .career > .info-title {
+        font-size: 35px; left: 10px; top: 0;
+    }
+    .pro-top .info .career ul {
+        font-size: 16px;
+        line-height: 25px;
+        padding: 35px 15px 0;
+        color: #2F184B;
+    }
+    .pro-top .info .career ul li span {
+        width: 95px;
     }
     /* 라이센스 */
     .pro-top .info .license ul li {
         width: 100%;
     }
+    .profile .pro-top .info .license > .info-title {
+        font-size: 35px; left: 10px; top: 0;
+    }
+    .pro-top .info .license ul {
+        font-size: 16px;
+        line-height: 25px;
+        padding: 35px 15px 0;
+        color: #2F184B;
+    }
+    .pro-top .info .license ul li span {
+        width: 95px; 
+    }
     /* 스킬크기 */
     .skill ul li {
-        width: 16%;
+        width: 18%;
     }
 }
