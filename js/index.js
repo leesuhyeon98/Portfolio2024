@@ -172,7 +172,8 @@ window.onload = function(){
                             <iframe src="https://www.youtube.com/embed/${obj.videoid}?autoplay=1&mute=1" allowfullscreen></iframe>
                         </div>
                         <div class="info">
-                            <h1>${obj.title}</h1>
+                            <h2>${obj.title}</h2>
+                            <h1>${obj.name}</h1>
                             <h2>작업기간 : ${obj.period}</h2>
                             <h3>사용툴 : ${obj.tool}</h3>
                             <p>${obj.info}.</p>

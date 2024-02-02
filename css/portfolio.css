@@ -49,12 +49,15 @@
 .view-cont .player::after { padding-bottom: 56.25%; content: ""; display: block; }
 .view-cont .player iframe { position: absolute; width: 100%; height: 100%; border: none; }
 .view-cont .info { width: 30%; background-color: #F4EFFA; padding: 30px;}
-.view-cont .info h1 { font-size: 30px; }
-.view-cont .info h2 { font-size: 20px; }
-.view-cont .info h3 { font-size: 20px; }
+.view-cont .info h1 { font-size: 30px; font-family: 'SBAggroM'; 
+    margin-bottom: 1rem; }
+.view-cont .info h2 { font-size: 20px;
+    color: #9B72CF;}
+.view-cont .info h3 { font-size: 16px; 
+    color: #9B72CF; margin-bottom: 1rem;}
 .view-cont .info p { 
     font-size: 18px; line-height: 25px;
-    margin-top: 20px;
+    margin: 2rem 0; line-height: 30px;
 }
 .view-cont .info p:last-child { 
     font-size: 14px;
@@ -205,4 +208,13 @@
     .viewmore2 {
         margin: 40px auto;
     }
+    /* 모달 텍스트 */
+    .view-cont .info h1 { font-size: 25px; margin-bottom: 10px; 
+    }
+    .view-cont .info h2 { font-size: 18px; 
+        margin-bottom: 10px; 
+    }
+    .view-cont .info h3 { font-size: 16px; }
+    .view-cont .info p { font-size: 16px; }
+    .view-cont .info p:last-child { font-size: 13px; }
 }
