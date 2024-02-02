@@ -149,6 +149,9 @@
 /* 모바일 */
 @media screen and (max-width: 768px){
     /* 영상포폴 + 타이틀 */
+    .portfolio {
+        padding-bottom: 50px;
+    }
     .portfolio .title {
         padding-top: 60px;
         font-size: 35px;
@@ -157,31 +160,32 @@
     .work { padding-top: 30px; }
     .work ul li { width: 95%; margin: 10px auto; }
     .work ul li:nth-child(n+4) {display: none;}
+
+    /* 영상 뷰모어 */
+    .viewmore1 {
+        margin: 0px auto;
+    }
     
     /* 서브 탭 */
     .tab-list2{
         display: flex; justify-content: center; gap: 5px; margin-bottom: 40px; flex-wrap: wrap;
     }
-    .tab-list2 li a{
-        padding: 0 20px; display: flex; align-items: center; height: 45px;
-        font-size: 2rem; font-family: 'SBAggroM'; color: #C8B1E4;
-    }
     /* 서브 탭 메뉴 */
     .tab-list2 li a{
-        padding: 0 5px; display: flex; align-items: center; height: 45px;
-        font-size: 2rem; font-family: 'SBAggroM'; color: #C8B1E4;
+        font-size: 25px; font-family: 'SBAggroM';
     }
     /* 서브 뷰 영역 */
-    .slide-wrap3 ul {
-        gap: 2%;
-    }
     .slide-wrap3 ul li{
         height: auto; font-size: 1.5rem; 
-        width: calc(98%/2); margin-bottom: 1.5rem;
+        width: 95%; margin: 0 auto;
     }
-    .slide-wrap3 ul li:nth-child(n+3) { display: none; }
+    .slide-wrap3 ul li:nth-child(n+2) { display: none; }
     /* 서브포폴 텍스트박스 */
     .work2 .slide-wrap3 ul li .txtbox p.title{
         font-size: 1.6rem;
+    }
+    /* 서브 뷰모어 */
+    .viewmore2 {
+        margin: 40px auto;
     }
 }
