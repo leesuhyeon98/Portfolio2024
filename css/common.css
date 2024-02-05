@@ -23,6 +23,7 @@ body::-webkit-scrollbar {
     display: none;
 }
 .inner{
+    width: 100%; max-width: 1400px;
     padding: 0 20px;
     position: relative; margin: 0 auto;
     }

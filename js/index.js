@@ -164,6 +164,8 @@ window.onload = function(){
                 <li>
                     <div class="thumb-img">
                         <img src="https://img.youtube.com/vi/${obj.videoid}/mqdefault.jpg" alt="썸네일 이미지">
+                    </div>
+                    <div class="thumb-text">
                         <p>${obj.name}</p>
                         <p>작업기간 : ${obj.period}</p>
                     </div>
@@ -265,7 +267,7 @@ window.onload = function(){
                             <p class="title">${obj.title}</p>
                             <p class="writer" 
                                 ${obj.period ? "style='display:block'" : "style='display:none'"}>
-                                작업기간 : ${obj.period}
+                                ${obj.name}
                             </p>
                         </div>
                     </li>
