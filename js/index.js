@@ -8,6 +8,7 @@ window.onload = function(){
             header.classList.remove("active")
         }
     })
+    
     // 모바일 메뉴버튼
     let moManuBtn =document.querySelector(".mo-manu-btn")
     let sideManu =document.querySelector(".side-manu")
@@ -242,11 +243,11 @@ window.onload = function(){
                     for(let j = 0; j<tabs.length; j++){
                         tabs[j].classList.remove("active");
                     }
-                    this.classList.add("active")
-                    
+                    this.classList.add("active") 
                 })
                 
             }
+        
             workSlide(0)
 
         }
@@ -319,5 +320,6 @@ window.onload = function(){
                 modalCont.innerHTML = ``
             })
         }
+        
 
 } 
