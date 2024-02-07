@@ -249,7 +249,16 @@ window.onload = function(){
             }
         
             workSlide(0)
-
+            let navList = document.querySelectorAll(".sub-manu li")
+            for(let i=1; i < navList.length; i++){
+                navList[i].addEventListener("click",function(){
+                    workSlide(i - 1)
+                    for(let j = 0; j<tabs.length; j++){
+                        tabs[j].classList.remove("active");
+                    }
+                    tabs[i -1].classList.add("active");
+                })
+            }
         }
 
         let workSwiper;
