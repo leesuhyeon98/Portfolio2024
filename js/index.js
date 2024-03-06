@@ -110,7 +110,7 @@ window.onload = function(){
                 proHtml.animate(0.5)
                 proCss.animate(0.2)
                 proJs.animate(0.2)
-                proFigma.animate(0.7)
+                proFigma.animate(0.5)
                 proBlender.animate(0.5)
             }else{
                 proPs.animate(0)
